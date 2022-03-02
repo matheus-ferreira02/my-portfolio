@@ -23,31 +23,31 @@ function Header() {
           <ul className="menu-links">
             <li>
               <a href="#home">
-                <span><BiHomeAlt /></span>Home
+                <span><BiHomeAlt /></span><p>Home</p>
               </a>
             </li>
 
             <li>
               <a href="#about">
-                <span><BiInfoCircle /></span>About
+                <span><BiInfoCircle /></span><p>About</p>
               </a>
             </li>
 
             <li>
               <a href="#skills">
-                <BiPencil />Skills
+                <span><BiPencil /></span><p>Skills</p>
               </a>
             </li>
 
             <li>
               <a href="#projects">
-                <span><BiBookBookmark /></span>Projects
+                <span><BiBookBookmark /></span><p>Projects</p>
               </a>
             </li>
 
             <li>
               <a href="#contacts">
-                <span><BiPhoneCall /></span>Contacts
+                <span><BiPhoneCall /></span><p>Contacts</p>
               </a>
             </li>
           </ul>
