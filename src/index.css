@@ -19,6 +19,11 @@
   --tran-03: all 0.3s ease;
   --tran-04: all 0.4s ease;
   --tran-05: all 0.5s ease;
+  --open-menu: blur(0px);
+}
+
+.menu-open {
+  --open-menu: blur(5px);
 }
 
 .dark-theme {
@@ -33,17 +38,17 @@
 body {
   background-color: var(--body-color);
   font-family: 'Montserrat', sans-serif;
-  transition: var(--tran-02);
+  transition: var(--tran-03);
 }
 
 .header, .menu-links {
   background-color: var(--siderbar-color);
-  transition: var(--tran-02);
+  transition: var(--tran-03);
 }
 
 .checbox-menu svg {
   color: var(--primary-color);
-  transition: var(--tran-02);
+  transition: var(--tran-03);
 }
 
 .menu-links li a {
@@ -56,5 +61,5 @@ body {
 
 .menu-links li a:hover {
   background-color: var(--toggle-color);
-  transition: var(--tran-02);
+  transition: var(--tran-03);
 }

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall } from "react-icons/bi";
+import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from "react-icons/bi";
 import './style.css';
 
 function Header() {
   const [checkbox, setCheckbox] = useState(false);
+  const [checkboxTheme, setCheckboxTheme] = useState(false);
 
   const alterar = () => {
     document.body.classList.toggle('dark-theme')
+    setCheckboxTheme(!checkboxTheme);
   }
 
   return (
@@ -52,8 +54,11 @@ function Header() {
           
           <div className="empty-container" onClick={ () => setCheckbox(!checkbox) } />
         </div>
-        
-        <button onClick={ alterar } className="btn-theme">alterar tema</button>
+
+        <div className="checkbox-theme">
+          { checkboxTheme ? <BiMoon /> : <BiSun />}
+          <input onChange={ alterar } type="checkbox" />
+        </div>
       </nav>
     </header>
     
