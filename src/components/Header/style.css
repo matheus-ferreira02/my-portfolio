@@ -7,13 +7,13 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  height: 7vh;
+  height: 60px;
 }
 
 .container-menu {
   display: flex;
   position: fixed;
-  top: 7vh;
+  top: 60px;
   transform: translateX(-100%);
   transition: all 0.4s ease;
   width: 100%;
@@ -37,6 +37,7 @@
   border-radius: 10px;
   cursor: pointer;
   display: flex;
+  font-weight: 600;
   justify-content: flex-start;
   margin: 15px 10px;
   padding: 10px 10px;
@@ -132,6 +133,11 @@ input:checked[type="checkbox"]::before {
     display: none;
   }
 
+  .menu-links li a svg {
+    margin: 0;
+    padding: 0;
+  }
+
   .container-menu {
     transform: none;
     width: 100px;
@@ -156,5 +162,42 @@ input:checked[type="checkbox"]::before {
 
   .show-menu .empty-container {
     display: block;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .checbox-menu {
+    display: none;
+  }
+
+  .container-menu {
+    position: static;
+  }
+
+  .menu-links {
+    flex-direction: row;
+    height: 0;
+    width: 100%;
+  }
+
+  .menu-links p {
+    display: block;
+    margin: 0;
+  }
+
+  .menu-links li {
+    margin: 0 10px;
+    padding: 0 10px;
+    width: max-content;
+  }
+
+  .menu-links li a {
+    padding: 10px 10px;
+    margin: 0 10px;
+  }
+
+  .menu-links li a svg {
+    display: none;
   }
 }
