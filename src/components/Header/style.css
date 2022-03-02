@@ -200,4 +200,8 @@ input:checked[type="checkbox"]::before {
   .menu-links li a svg {
     display: none;
   }
+
+  .selected {
+    background-color: red;
+  }
 }
