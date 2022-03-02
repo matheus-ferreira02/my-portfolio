@@ -12,10 +12,8 @@ function Header() {
           <GiHamburgerMenu />
         </label>
 
-        <div className={`container-menu ${checkbox && 'showMenu'}`}>
+        <div className={`container-menu ${checkbox && 'show-menu'}`}>
           <ul className="menu-links">
-            <li>oi</li>
-            <li>eeee</li>
             <li>teste</li>
             <li>duduududu</li>
           </ul>

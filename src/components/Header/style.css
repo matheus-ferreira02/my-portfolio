@@ -1,5 +1,6 @@
 .header {
-  background-color: red;
+  position: fixed;
+  width: 100%;
 }
 
 .navigation {
@@ -25,7 +26,6 @@
   align-items: center;
   width: 70%;
   height: 100vh;
-  background-color: purple;
 }
 
 .menu-links li {
@@ -34,7 +34,6 @@
 
 .checbox-menu svg {
   font-size: 2em;
-  color: white;
   cursor: pointer;
   margin: 10px;
 }
@@ -43,7 +42,7 @@
   display: none;
 }
 
-.showMenu {
+.show-menu {
   transform: translateX(0%);
 }
 
@@ -53,5 +52,15 @@
 
 .empty-container {
   width: 30%;
+  height: 100vh;
+}
+
+.primeira {
+  background-color: yellow;
+  height: 100vh;
+}
+
+.segunda {
+  background-color: blue;
   height: 100vh;
 }

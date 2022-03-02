@@ -30,5 +30,12 @@
 
 body {
   background-color: var(--body-color);
-  display: grid;
+}
+
+.header, .menu-links {
+  background-color: var(--siderbar-color);
+}
+
+.checbox-menu svg {
+  color: var(--primary-color);
 }
