@@ -1,13 +1,64 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --body-color: #E7ECEF;
+  --siderbar-color: #fff;
+  --primary-color: #6F64FE;
+  --primary-color-light: #efeff7;
+  --toggle-color: #ddd;
+  --text-color: #5E5E5E;
+
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+.dark-theme {
+  --body-color: #18191a;
+  --siderbar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: var(--tran-03);
+}
+
+div {
+  width: min-content;
+  height: 400px;
+  background-color: var(--siderbar-color);
+  transition: var(--tran-03);
+}
+
+header {
+  width: 100%;
+  background-color: var(--siderbar-color);
+  transition: var(--tran-03);
+}
+
+div p:hover {
+  background-color: var(--primary-color);
+  color: var(--toggle-color);
+  transition: var(--tran-03);
+}
+
+.selected {
+  padding: 10px;
+  background-color: var(--primary-color-light);
+  transition: var(--tran-02);
+}
+
+.selected:hover {
+  text-decoration-color: black;
+  color: black;
 }
