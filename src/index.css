@@ -12,7 +12,7 @@
   --siderbar-color: #fff;
   --primary-color: #6F64FE;
   --primary-color-light: #efeff7;
-  --toggle-color: #ddd;
+  --toggle-color: rgb(230, 230, 230);
   --text-color: #5E5E5E;
 
   --tran-02: all 0.2s ease;
