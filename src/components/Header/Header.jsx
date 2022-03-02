@@ -4,26 +4,24 @@ import './style.css';
 
 function Header() {
   const [checkbox, setCheckbox] = useState(false);
-  const teste = () => {
-    setCheckbox(!checkbox);
-    console.log('foi');
-  }
+
   return (
     <header className="header">
       <nav className="navigation">
-        <label onClick={ () => teste() } htmlFor="checbox-menu" className="checbox-menu">
+        <label onClick={ () => setCheckbox(!checkbox) } htmlFor="checbox-menu" className="checbox-menu">
           <GiHamburgerMenu />
         </label>
-        <input className="input-checkbox" type="checkbox" id="checbox-menu" />
-        <ul className="menu-links">
-          <li>oi</li>
-          <li>eeee</li>
-          <li>teste</li>
-          <li>duduududu</li>
-          <div onClick={ () => teste() }>oi</div>
-        </ul>
+        <div className={`container-menu ${checkbox && 'showMenu'}`}>
+          <ul className="menu-links">
+            <li>oi</li>
+            <li>eeee</li>
+            <li>teste</li>
+            <li>duduududu</li>
+          </ul>
+          <div className="empty-container" onClick={ () => setCheckbox(!checkbox) } />
+        </div>
         
-        <button className="btn-theme">alterar thema</button>
+        <button className="btn-theme">alterar tema</button>
       </nav>
     </header>
     

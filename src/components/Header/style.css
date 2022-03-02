@@ -9,17 +9,22 @@
   height: 7vh;
 }
 
+.container-menu {
+  display: flex;
+  transition: all 0.4s ease;
+  position: fixed;
+  transform: translateX(-100%);
+  top: 7vh;
+  width: 100%;
+}
+
 .menu-links {
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
   width: 70%;
   height: 100vh;
-  top: 7vh;
-  transition: all 0.4s ease;
-  transform: translateX(-100%);
   background-color: purple;
 }
 
@@ -38,10 +43,15 @@
   display: none;
 }
 
-.input-checkbox:checked ~ .menu-links {
+.showMenu {
   transform: translateX(0%);
 }
 
 .btn-theme {
   margin: 10px;
+}
+
+.empty-container {
+  width: 30%;
+  height: 100vh;
 }
