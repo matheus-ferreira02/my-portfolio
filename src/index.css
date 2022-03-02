@@ -61,11 +61,27 @@ body {
 
 .menu-links li a:hover {
   background-color: var(--toggle-color);
-  transition: var(--tran-03);
+}
+
+.selected a {
+  background-color: var(--toggle-color);
 }
 
 @media only screen and (min-width: 992px) {
   .menu-links li a {
     color: var(--primary-color);
+  }
+
+  .menu-links li a:hover {
+    background-color:  var(--primary-color);
+    color: var(--siderbar-color);
+  }
+
+  .selected a p {
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  .selected a:hover p {
+    border-bottom: 3px solid var(--toggle-color);
   }
 }

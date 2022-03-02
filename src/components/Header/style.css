@@ -201,7 +201,7 @@ input:checked[type="checkbox"]::before {
     display: none;
   }
 
-  .selected {
-    background-color: red;
+  .selected a {
+    background: none;
   }
 }

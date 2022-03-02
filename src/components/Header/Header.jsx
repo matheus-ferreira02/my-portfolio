@@ -8,8 +8,7 @@ function Header() {
   const [checkbox, setCheckbox] = useState(false);
   const [checkboxTheme, setCheckboxTheme] = useState(false);
 
-  const location = useLocation();
-  console.log(location.hash);
+  const { hash } = useLocation();
 
   const alterar = () => {
     document.body.classList.toggle('dark-theme')
@@ -25,32 +24,31 @@ function Header() {
 
         <div className={`container-menu ${checkbox && 'show-menu'}`}>
           <ul className="menu-links">
-            <li>
-              
+            <li className={ hash === '#home' ? 'selected' : 0 }>
               <a href="#home">
                 <span><BiHomeAlt /></span><p>Home</p>
               </a>
             </li>
 
-            <li>
+            <li className={ hash === '#about' ? 'selected' : 0 }>
               <a href="#about">
                 <span><BiInfoCircle /></span><p>About</p>
               </a>
             </li>
 
-            <li>
+            <li  className={ hash === '#skills' ? 'selected' : 0 }>
               <a href="#skills">
                 <span><BiPencil /></span><p>Skills</p>
               </a>
             </li>
 
-            <li>
+            <li  className={ hash === '#projects' ? 'selected' : 0 }>
               <a href="#projects">
                 <span><BiBookBookmark /></span><p>Projects</p>
               </a>
             </li>
 
-            <li>
+            <li  className={ hash === '#contacts' ? 'selected' : 0 }>
               <a href="#contacts">
                 <span><BiPhoneCall /></span><p>Contacts</p>
               </a>
