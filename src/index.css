@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 :root {
@@ -21,44 +22,13 @@
 .dark-theme {
   --body-color: #18191a;
   --siderbar-color: #242526;
-  --primary-color: #3a3b3c;
-  --primary-color-light: #3a3b3c;
+  --primary-color: #6F64FE;
+  --primary-color-light: #6F64FE;
   --toggle-color: #fff;
   --text-color: #ccc;
 }
 
 body {
   background-color: var(--body-color);
-  color: var(--text-color);
-  transition: var(--tran-03);
-}
-
-div {
-  width: min-content;
-  height: 400px;
-  background-color: var(--siderbar-color);
-  transition: var(--tran-03);
-}
-
-header {
-  width: 100%;
-  background-color: var(--siderbar-color);
-  transition: var(--tran-03);
-}
-
-div p:hover {
-  background-color: var(--primary-color);
-  color: var(--toggle-color);
-  transition: var(--tran-03);
-}
-
-.selected {
-  padding: 10px;
-  background-color: var(--primary-color-light);
-  transition: var(--tran-02);
-}
-
-.selected:hover {
-  text-decoration-color: black;
-  color: black;
+  display: grid;
 }
