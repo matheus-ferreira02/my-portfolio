@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from "react-icons/bi";
+import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from 'react-icons/bi';
 import './style.css';
 
 function Header() {
   const [checkbox, setCheckbox] = useState(false);
   const [checkboxTheme, setCheckboxTheme] = useState(false);
-  const { history } = useHistory();
-  console.log(history.pathname);
+
+  const location = useLocation();
+  console.log(location.hash);
 
   const alterar = () => {
     document.body.classList.toggle('dark-theme')
@@ -25,6 +26,7 @@ function Header() {
         <div className={`container-menu ${checkbox && 'show-menu'}`}>
           <ul className="menu-links">
             <li>
+              
               <a href="#home">
                 <span><BiHomeAlt /></span><p>Home</p>
               </a>
