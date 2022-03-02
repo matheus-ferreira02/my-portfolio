@@ -29,13 +29,35 @@
 }
 
 .menu-links li {
+  width: 100%;
+}
+
+.menu-links li a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 10px;
+  margin: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu-links li a svg {
+  margin-right: 20px;
+  font-size: 2em;
+}
+
+.menu-links li {
   display: flex;
 }
 
 .checbox-menu svg {
   font-size: 2em;
   cursor: pointer;
-  margin: 10px;
+  margin: 10px 20px;
 }
 
 .input-checkbox {
@@ -52,15 +74,5 @@
 
 .empty-container {
   width: 30%;
-  height: 100vh;
-}
-
-.primeira {
-  background-color: yellow;
-  height: 100vh;
-}
-
-.segunda {
-  background-color: blue;
   height: 100vh;
 }

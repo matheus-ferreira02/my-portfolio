@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall } from "react-icons/bi";
 import './style.css';
 
 function Header() {
   const [checkbox, setCheckbox] = useState(false);
+
+  const alterar = () => {
+    document.body.classList.toggle('dark-theme')
+  }
 
   return (
     <header className="header">
@@ -14,14 +19,41 @@ function Header() {
 
         <div className={`container-menu ${checkbox && 'show-menu'}`}>
           <ul className="menu-links">
-            <li>teste</li>
-            <li>duduududu</li>
+            <li>
+              <a href="#home">
+                <span><BiHomeAlt /></span>Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#about">
+                <span><BiInfoCircle /></span>About
+              </a>
+            </li>
+
+            <li>
+              <a href="#skills">
+                <BiPencil />Skills
+              </a>
+            </li>
+
+            <li>
+              <a href="#projects">
+                <span><BiBookBookmark /></span>Projects
+              </a>
+            </li>
+
+            <li>
+              <a href="#contacts">
+                <span><BiPhoneCall /></span>Contacts
+              </a>
+            </li>
           </ul>
           
           <div className="empty-container" onClick={ () => setCheckbox(!checkbox) } />
         </div>
         
-        <button className="btn-theme">alterar tema</button>
+        <button onClick={ alterar } className="btn-theme">alterar tema</button>
       </nav>
     </header>
     
