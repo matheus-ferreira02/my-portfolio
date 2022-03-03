@@ -1,21 +1,21 @@
 .home-container {
-  height: 100vh;
+  align-items: center;
   background-image: url('../../images/fundo.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: space-evenly;
-  align-items: center;
   padding: 20px 0;
 }
 
 .text-home {
-  width: 80%;
   color: white;
-  text-align: center;
   font-size: 2.4em;
   text-align: center;
+  text-align: center;
+  width: 80%;
 }
 
 /* Consultei o repositório do Lucas Petzinger para fazer o css
@@ -24,10 +24,10 @@ Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css *
 .currentTitle1 {
   color: #6F64FE;
   font-size: 2em;
-  width: 90%;
   height: 10vh;
-  text-align: center;
   opacity: 0;
+  text-align: center;
+  width: 90%;
 }
 
 .currentTitle2 {
@@ -44,10 +44,10 @@ Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css *
 }
 
 .arrow-down {
-  color: #6F64FE;
-  height: 2vh;
   animation: float 1.5s ease-in-out infinite;
+  color: #6F64FE;
   cursor: pointer;
+  height: 2vh;
 }
 
 .arrow-down svg {
@@ -55,13 +55,9 @@ Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css *
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0%);
-  }
+  0%, 100% { transform: translateY(0%) }
 
-  50% {
-    transform: translateY(100%);
-  }
+  50% { transform: translateY(100%) }
 }
 
 @media only screen and (min-width: 600px) {
