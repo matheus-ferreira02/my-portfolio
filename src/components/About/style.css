@@ -22,7 +22,7 @@
 .about-text {
   width: 80%;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   margin-top: 20px;
   margin-bottom: 50px;
 }
@@ -30,11 +30,25 @@
 @media only screen and (min-width: 600px) {
   .about-container {
     padding-left: 100px;
+    min-height: 80vh;
+  }
+
+  .about-text {
+    font-size: 1.8em;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .about-container {
     padding-left: 0;
+    width: 900px;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-container {
+    width: 900px;
+    margin: auto;
   }
 }
