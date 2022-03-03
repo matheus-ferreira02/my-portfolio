@@ -18,7 +18,11 @@ function Header() {
   return (
     <header className="header">
       <nav className="navigation">
-        <label onClick={ () => setCheckbox(!checkbox) } htmlFor="checbox-menu" className="checbox-menu">
+        <label
+          onClick={ () => setCheckbox(!checkbox) }
+          htmlFor="checbox-menu"
+          className="checbox-menu"
+        >
           <GiHamburgerMenu />
         </label>
 
@@ -26,31 +30,36 @@ function Header() {
           <ul className="menu-links">
             <li className={ hash === '#home' ? 'selected' : 0 }>
               <a href="#home">
-                <span><BiHomeAlt /></span><p>Home</p>
+                <span><BiHomeAlt /></span>
+                <p>Home</p>
               </a>
             </li>
 
             <li className={ hash === '#about' ? 'selected' : 0 }>
               <a href="#about">
-                <span><BiInfoCircle /></span><p>About</p>
+                <span><BiInfoCircle /></span>
+                <p>About</p>
               </a>
             </li>
 
             <li  className={ hash === '#skills' ? 'selected' : 0 }>
               <a href="#skills">
-                <span><BiPencil /></span><p>Skills</p>
+                <span><BiPencil /></span>
+                <p>Skills</p>
               </a>
             </li>
 
             <li  className={ hash === '#projects' ? 'selected' : 0 }>
               <a href="#projects">
-                <span><BiBookBookmark /></span><p>Projects</p>
+                <span><BiBookBookmark /></span>
+                <p>Projects</p>
               </a>
             </li>
 
             <li  className={ hash === '#contacts' ? 'selected' : 0 }>
               <a href="#contacts">
-                <span><BiPhoneCall /></span><p>Contacts</p>
+                <span><BiPhoneCall /></span>
+                <p>Contacts</p>
               </a>
             </li>
           </ul>
@@ -64,8 +73,7 @@ function Header() {
         </div>
       </nav>
     </header>
-    
   )
 }
 
-export default Header
+export default Header;
