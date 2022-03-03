@@ -36,7 +36,7 @@
 }
 
 .blurred-background .main {
-  filter: brightness(55%);
+  filter: blur(2px);
   transition: var(--tran-02);
 }
 
