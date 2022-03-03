@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <section className="home-container">
-      <h1 className="text-home">Hello, I'am Matheus Ferreira and this is my portfolio</h1>
+      <h1 className="text-home">Hello, I'am Matheus Ferreira  <br /> and this is my portfolio</h1>
 
       {/* Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/pages/Home.jsx */}
       <h1 onAnimationEnd={ () => {

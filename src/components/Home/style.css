@@ -1,5 +1,5 @@
 .home-container {
-  height: calc(100vh);
+  height: 100vh;
   background-image: url('../../images/fundo.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,6 +47,7 @@ Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css *
   color: #6F64FE;
   height: 2vh;
   animation: float 1.5s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .arrow-down svg {
@@ -60,5 +61,17 @@ Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css *
 
   50% {
     transform: translateY(100%);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .home-container {
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .home-container {
+    padding-left: 0;
   }
 }
