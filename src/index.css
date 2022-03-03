@@ -72,6 +72,10 @@ body {
   background-color: var(--toggle-color);
 }
 
+.about-text {
+  color: var(--text-color);
+}
+
 @media only screen and (min-width: 992px) {
   .menu-links li a {
     color: var(--primary-color);
