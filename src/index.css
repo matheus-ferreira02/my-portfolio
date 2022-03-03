@@ -35,6 +35,11 @@
   --text-color: gray;
 }
 
+.blurred-background .main {
+  filter: brightness(60%);
+  transition: var(--tran-02);
+}
+
 body {
   background-color: var(--body-color);
   font-family: 'Montserrat', sans-serif;

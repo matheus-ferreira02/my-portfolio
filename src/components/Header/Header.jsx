@@ -10,6 +10,11 @@ function Header() {
 
   const { hash } = useLocation();
 
+  const changeBackground = () => {
+    setCheckbox(!checkbox);
+    document.body.classList.toggle('blurred-background')
+  }
+
   const changeTheme = () => {
     document.body.classList.toggle('dark-theme')
     setCheckboxTheme(!checkboxTheme);
@@ -19,7 +24,7 @@ function Header() {
     <header className="header">
       <nav className="navigation">
         <label
-          onClick={ () => setCheckbox(!checkbox) }
+          onClick={ changeBackground }
           htmlFor="checbox-menu"
           className="checbox-menu"
         >
@@ -64,7 +69,7 @@ function Header() {
             </li>
           </ul>
           
-          <div className="empty-container" onClick={ () => setCheckbox(!checkbox) } />
+          <div className="empty-container" onClick={ changeBackground } />
         </div>
 
         <div className="checkbox-theme">

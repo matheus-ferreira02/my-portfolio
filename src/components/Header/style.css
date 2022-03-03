@@ -172,6 +172,16 @@ input:checked[type="checkbox"]::before {
     display: none;
   }
 
+  .show-menu {
+    transform: none;
+    width: 0;
+    height: 0;
+  }
+
+  .blurred-background .main {
+    filter: none;
+  }
+
   .container-menu {
     position: static;
   }
@@ -179,7 +189,6 @@ input:checked[type="checkbox"]::before {
   .menu-links {
     flex-direction: row;
     height: 0;
-    width: 100%;
   }
 
   .menu-links p {
