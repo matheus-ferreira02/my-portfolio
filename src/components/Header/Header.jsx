@@ -10,7 +10,7 @@ function Header() {
 
   const { hash } = useLocation();
 
-  const alterar = () => {
+  const changeTheme = () => {
     document.body.classList.toggle('dark-theme')
     setCheckboxTheme(!checkboxTheme);
   }
@@ -69,7 +69,7 @@ function Header() {
 
         <div className="checkbox-theme">
           { checkboxTheme ? <BiMoon /> : <BiSun />}
-          <input onChange={ alterar } type="checkbox" />
+          <input onChange={ changeTheme } type="checkbox" />
         </div>
       </nav>
     </header>
