@@ -8,12 +8,12 @@
 }
 
 :root {
-  --body-color: #E7ECEF;
+  --body-color: #e7ecef;
   --siderbar-color: #fff;
-  --primary-color: #6F64FE;
-  --primary-color-light: #efeff7;
+  --primary-color: #6f64fe;
+  --primary-color-light: #d3d7da;
   --toggle-color: rgb(230, 230, 230);
-  --text-color: #5E5E5E;
+  --text-color: #5e5e5e;
 
   --tran-02: all 0.2s ease;
   --tran-03: all 0.3s ease;
@@ -22,22 +22,18 @@
   --open-menu: blur(0px);
 }
 
-.menu-open {
-  --open-menu: blur(5px);
-}
-
 .dark-theme {
   --body-color: #18191a;
   --siderbar-color: #242526;
-  --primary-color: #6F64FE;
-  --primary-color-light: #6F64FE;
+  --primary-color: #6f64fe;
+  --primary-color-light: #1d1e1f;
   --toggle-color: #363738;
   --text-color: gray;
 }
 
 .blurred-background .main {
-  filter: blur(2px);
-  transition: var(--tran-02);
+  filter: opacity(35%);
+  transition: var(--tran-04);
 }
 
 body {
@@ -74,6 +70,10 @@ body {
 
 .about-text {
   color: var(--text-color);
+}
+
+.skills-container {
+  background-color: var(--primary-color-light);
 }
 
 @media only screen and (min-width: 992px) {
