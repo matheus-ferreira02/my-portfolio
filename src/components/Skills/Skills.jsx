@@ -17,8 +17,8 @@ function Skills() {
 
           <div className="face face2">
             <div className="content-card">
-              <p>It is an open-source JavaScript library, created by the facebook team, to develop user interfaces, being one of the most used frameworks in the front-end market.</p>
-              <a href="#">Read more</a>
+              <p>É uma biblioteca JavaScript open-source, criado pela equipe do Facebook, para desenvolver interfaces de usuários, sendo um dos frameworks mais utilizados no mercado de front-end.</p>
+              <a href="#">Leia mais</a>
             </div>
           </div>
         </div>
@@ -33,8 +33,8 @@ function Skills() {
 
           <div className="face face2">
             <div className="content-card">
-              <p>Is a programming language that allows you to implement complex items in web pages such as creating dynamically updating content, handling multimedia and animated images.</p>
-              <a href="#">Read more</a>
+              <p>é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web.</p>
+              <a href="#">Leia mais</a>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ function Skills() {
           <div className="face face2">
             <div className="content-card">
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo odit aut mollitia dadadawdawdadad</p>
-              <a href="#">Read more</a>
+              <a href="#">Leia mais</a>
             </div>
           </div>
         </div>

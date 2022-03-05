@@ -6,7 +6,7 @@ function About() {
     <section id="about" className="about-container">
       <div className="profile-picture" />
       <p className="about-text">
-        I am 19 years old, born in São Paulo-Brazil, and currently living in Itanhaém-Brasil, on the coast of São Paulo. I like video games, listening to music and programming. I am currently studying Web Development at Trybe!! A school that teaches programming, learning and working! I am a Front-End developer and future Back-End developer.
+      Tenho 19 anos, nasci em São Paulo, morando atualmente em Itanhaém, litoral paulista. Gosto de videogames, ouvir músicas e programar. Atualmente estou estudando Back End na Trybe!! Uma escola que ensina a programar, aprender e a trabalhar! Sou desenvolvedor Front End e futuro desenvolvedor Full Stack.
       </p>
     </section>
   )
