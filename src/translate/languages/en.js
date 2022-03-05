@@ -20,6 +20,9 @@ const messages = {
         javascript: 'It is a lightweight, interpreted, object-based language with first-class functions, better known as the scripting language for Web pages.',
         redux: 'It is one of the most popular libraries in front-end development today. It is primarily used for application state management.',
         rtl: 'React Testing Library is a JavaScript testing library, it is a very lightweight solution for testing React components.',
+      },
+      messages: {
+        language: 'Language',
       }
     }
   }

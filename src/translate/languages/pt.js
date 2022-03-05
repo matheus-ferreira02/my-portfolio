@@ -20,6 +20,9 @@ const messages = {
         javascript: 'É uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web.',
         redux: 'É uma das bibliotecas mais populares no desenvolvimento front-end atualmente. É usado principalmente para gerenciamento de estado do aplicativo.',
         rtl: 'React Testing Libray é uma biblioteca JavaScript de testes, é uma solução muito leve para testar componentes React.',
+      },
+      messages: {
+        language: 'Idioma',
       }
     }
   }

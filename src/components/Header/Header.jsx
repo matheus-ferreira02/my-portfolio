@@ -3,6 +3,7 @@ import i18n from '../../translate/i18n';
 import { useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from 'react-icons/bi';
+import { FiChevronDown } from 'react-icons/fi';
 import './style.css';
 
 const I18N_STORAGE_KEY = 'i18nextLng';
@@ -34,8 +35,8 @@ function Header() {
     setCheckboxTheme(!checkboxTheme);
   }
 
-  const handleLanguage = ({ target }) => {
-    localStorage.setItem(I18N_STORAGE_KEY, target.value);
+  const handleLanguage = (name) => {
+    localStorage.setItem(I18N_STORAGE_KEY, name);
     window.location.reload();
   }
 
@@ -91,20 +92,45 @@ function Header() {
           <div className="empty-container" onClick={ changeBackground } />
         </div>
 
-        <div>
-          <select onChange={ handleLanguage } value={ language }>
-            <option value="pt-BR">Portuguese(PT-BR)</option>
-            <option value="en-US">English(US)</option>
-          </select>
+        <div className="options-container">
+          <section className="checkbox-theme">
+              { checkboxTheme ? <BiMoon /> : <BiSun />}
+              <input
+                onChange={ changeTheme }
+                type="checkbox"
+                checked={ checkboxTheme }
+              />
+          </section>
 
-          <div className="checkbox-theme">
-            { checkboxTheme ? <BiMoon /> : <BiSun />}
-            <input
-              onChange={ changeTheme }
-              type="checkbox"
-              checked={ checkboxTheme }
-            />
-          </div>
+          <section className="select-container">
+            <span className="label-input">{ i18n.t('messages.language') }</span>
+            <section className="dropdown">
+              <div>
+                <span className="select">
+                  { console.log(language) }
+                  { language === 'en-US'
+                    ? <img src="https://www.svgrepo.com/show/248851/united-states.svg" alt="flag" />
+                    : <img src="https://www.svgrepo.com/show/248829/brazil.svg" alt="flag" />
+                  }
+                </span>
+                <FiChevronDown />
+              </div>
+
+              <div className="dropdown-list">
+                <div
+                  name={ language === 'pt-BR' ? 'en-US' : 'pt-BR' }
+                  aria-hidden="true"
+                  onClick={ () => handleLanguage(language === 'pt-BR' ? 'en-US' : 'pt-BR') }
+                  className="dropdown-list__item">
+                  { language === 'en-US'
+                    ? <img src="https://www.svgrepo.com/show/248829/brazil.svg" alt="flag" />
+                    : <img src="https://www.svgrepo.com/show/248851/united-states.svg" alt="flag" />
+                  }
+                </div>
+              </div>
+              
+            </section>
+          </section>
         </div>
 
         
