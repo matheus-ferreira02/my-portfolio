@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import i18n from '../../translate/i18n';
 import { useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -6,11 +6,12 @@ import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, 
 import './style.css';
 
 const I18N_STORAGE_KEY = 'i18nextLng';
+const DARK_THEME = 'dark-theme';
 
 function Header() {
   const [checkbox, setCheckbox] = useState(false);
   const [checkboxTheme, setCheckboxTheme] = useState(false);
-  const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY))
+  const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
 
   const { hash } = useLocation();
 
@@ -19,8 +20,17 @@ function Header() {
     document.body.classList.toggle('blurred-background')
   }
 
+  useEffect(() => {
+    const darkTheme = localStorage.getItem(DARK_THEME) || 'false';
+    if (darkTheme === 'true') {
+      document.body.classList.toggle(DARK_THEME);
+      setCheckboxTheme(true)
+    }
+  }, [])
+
   const changeTheme = () => {
-    document.body.classList.toggle('dark-theme')
+    localStorage.setItem(DARK_THEME, !checkboxTheme);
+    document.body.classList.toggle(DARK_THEME)
     setCheckboxTheme(!checkboxTheme);
   }
 
@@ -81,15 +91,23 @@ function Header() {
           <div className="empty-container" onClick={ changeBackground } />
         </div>
 
-        <select onChange={ handleLanguage } value={ language }>
-          <option value="pt-BR">Portuguese(PT-BR)</option>
-          <option value="en-US">English(US)</option>
-        </select>
+        <div>
+          <select onChange={ handleLanguage } value={ language }>
+            <option value="pt-BR">Portuguese(PT-BR)</option>
+            <option value="en-US">English(US)</option>
+          </select>
 
-        <div className="checkbox-theme">
-          { checkboxTheme ? <BiMoon /> : <BiSun />}
-          <input onChange={ changeTheme } type="checkbox" />
+          <div className="checkbox-theme">
+            { checkboxTheme ? <BiMoon /> : <BiSun />}
+            <input
+              onChange={ changeTheme }
+              type="checkbox"
+              checked={ checkboxTheme }
+            />
+          </div>
         </div>
+
+        
       </nav>
     </header>
   )
