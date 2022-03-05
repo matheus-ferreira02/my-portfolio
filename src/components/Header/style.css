@@ -4,6 +4,11 @@
   z-index: 1;
 }
 
+.header, .menu-links {
+  background-color: var(--siderbar-color);
+  transition: var(--tran-03);
+}
+
 .navigation {
   align-items: center;
   display: flex;
@@ -36,6 +41,7 @@
 .menu-links li a {
   align-items: center;
   border-radius: 10px;
+  color: var(--text-color);
   cursor: pointer;
   display: flex;
   font-weight: 600;
@@ -48,6 +54,7 @@
 }
 
 .menu-links li a svg {
+  color: var(--primary-color);
   font-size: 2em;
 }
 
@@ -55,15 +62,25 @@
   display: flex;
 }
 
+.menu-links li a:hover {
+  background-color: var(--toggle-color);
+}
+
 .menu-links p {
   margin-left: 20px;
   transition: all 0.2s ease;
 }
 
+.selected a {
+  background-color: var(--toggle-color);
+}
+
 .checbox-menu svg {
+  color: var(--primary-color);
   cursor: pointer;
   font-size: 2em;
   margin: 10px 20px;
+  transition: var(--tran-03);
 }
 
 .input-checkbox {
@@ -203,6 +220,7 @@ input:checked[type="checkbox"]::before {
   }
 
   .menu-links li a {
+    color: var(--primary-color);
     margin: 0 10px;
     padding: 10px 10px;
   }
@@ -211,7 +229,20 @@ input:checked[type="checkbox"]::before {
     display: none;
   }
 
+  .menu-links li a:hover {
+    background-color:  var(--primary-color);
+    color: var(--siderbar-color);
+  }
+
   .selected a {
     background: none;
+  }
+
+  .selected a p {
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  .selected a:hover p {
+    border-bottom: 3px solid var(--toggle-color);
   }
 }

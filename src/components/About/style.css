@@ -21,6 +21,7 @@
 }
 
 .about-text {
+  color: var(--text-color);
   font-size: 1.3em;
   margin-bottom: 50px;
   margin-top: 20px;

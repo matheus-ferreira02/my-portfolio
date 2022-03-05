@@ -2,4 +2,5 @@
   height: 100vh;
   display: flex;
   width: 100%;
+  background-color: var(--primary-color-light);
 }

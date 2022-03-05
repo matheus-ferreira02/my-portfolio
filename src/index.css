@@ -36,61 +36,12 @@
   transition: var(--tran-04);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--body-color);
   font-family: 'Montserrat', sans-serif;
   transition: var(--tran-03);
-}
-
-.header, .menu-links {
-  background-color: var(--siderbar-color);
-  transition: var(--tran-03);
-}
-
-.checbox-menu svg {
-  color: var(--primary-color);
-  transition: var(--tran-03);
-}
-
-.menu-links li a {
-  color: var(--text-color);
-}
-
-.menu-links li a svg {
-  color: var(--primary-color);
-}
-
-.menu-links li a:hover {
-  background-color: var(--toggle-color);
-}
-
-.selected a {
-  background-color: var(--toggle-color);
-}
-
-.about-text {
-  color: var(--text-color);
-}
-
-.skills-container {
-  background-color: var(--primary-color-light);
-}
-
-@media only screen and (min-width: 992px) {
-  .menu-links li a {
-    color: var(--primary-color);
-  }
-
-  .menu-links li a:hover {
-    background-color:  var(--primary-color);
-    color: var(--siderbar-color);
-  }
-
-  .selected a p {
-    border-bottom: 3px solid var(--primary-color);
-  }
-
-  .selected a:hover p {
-    border-bottom: 3px solid var(--toggle-color);
-  }
 }
