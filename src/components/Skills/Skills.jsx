@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from '../../translate/i18n';
 import { FaReact } from 'react-icons/fa';
 import { DiJavascript1 } from 'react-icons/di';
 import './style.css';
@@ -17,7 +18,7 @@ function Skills() {
 
           <div className="face face2">
             <div className="content-card">
-              <p>É uma biblioteca JavaScript open-source, criado pela equipe do Facebook, para desenvolver interfaces de usuários, sendo um dos frameworks mais utilizados no mercado de front-end.</p>
+              <p>{ i18n.t('skills.react') }</p>
               <a href="#">Leia mais</a>
             </div>
           </div>
@@ -33,7 +34,7 @@ function Skills() {
 
           <div className="face face2">
             <div className="content-card">
-              <p>é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web.</p>
+              <p>{ i18n.t('skills.javascript') }</p>
               <a href="#">Leia mais</a>
             </div>
           </div>
@@ -43,13 +44,29 @@ function Skills() {
           <div className="face face1">
             <div className="content-card">
               <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="react" />
-              <h3>Help</h3>
+              <h3>Redux</h3>
             </div>
           </div>
 
           <div className="face face2">
             <div className="content-card">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo odit aut mollitia dadadawdawdadad</p>
+              <p>{ i18n.t('skills.redux') }</p>
+              <a href="#">Leia mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="face face1">
+            <div className="content-card">
+              <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="react" />
+              <h3>RTL</h3>
+            </div>
+          </div>
+
+          <div className="face face2">
+            <div className="content-card">
+              <p>{ i18n.t('skills.rtl') }</p>
               <a href="#">Leia mais</a>
             </div>
           </div>
