@@ -9,7 +9,8 @@ const messages = {
         contacts: 'Contacts',
       },
       messagesHome: {
-        title: `Hello, I'am Matheus Ferreira and this is my portfolio`,
+        title: "Hello, I'am Matheus Ferreira",
+        title2: 'and this is my portfolio',
         smallText: ['Front End Developer', 'Full stack development student'],
       },
       about: {

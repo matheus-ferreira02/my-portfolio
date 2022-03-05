@@ -17,7 +17,11 @@ function Home() {
 
   return (
     <section id="home" className="home-container">
-      <h1 className="text-home">{ i18n.t('messagesHome.title') }</h1>
+      <h1 className="text-home">
+        { i18n.t('messagesHome.title') }
+        <br />
+        { i18n.t('messagesHome.title2') }
+      </h1>
 
       {/* Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/pages/Home.jsx */}
       <h1 onAnimationEnd={ () => {
