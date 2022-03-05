@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import i18n from '../../translate/i18n';
 import { BsChevronDoubleDown } from "react-icons/bs";
 import './style.css';
 function Home() {
-  const phrases = ['Desenvolvedor Front End', 'Estudante de desenvolvimento Full Stack'];
+  const phrases = i18n.t('messagesHome.smallText', { returnObjects: true });
   const [index, setIndex] = useState(0);
   const [change, setChange] = useState(true);
 
@@ -16,7 +17,7 @@ function Home() {
 
   return (
     <section id="home" className="home-container">
-      <h1 className="text-home">Olá, eu sou Matheus Ferreira  <br /> e esse é o meu portfólio</h1>
+      <h1 className="text-home">{ i18n.t('messagesHome.title') }</h1>
 
       {/* Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/pages/Home.jsx */}
       <h1 onAnimationEnd={ () => {

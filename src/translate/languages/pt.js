@@ -9,11 +9,11 @@ const messages = {
         contacts: 'Contatos',
       },
       messagesHome: {
-        title: 'Olá, eu sou Matheus Ferreira  <br /> e esse é o meu portfólio',
+        title: `Olá, eu sou Matheus Ferreira e esse é o meu portfólio`,
         smallText: ['Desenvolvedor Front End', 'Estudante de desenvolvimento Full Stack'],
       },
-      buttons: {
-        save: 'Salvar',
+      about: {
+        text: 'Tenho 19 anos, nasci em São Paulo, morando atualmente em Itanhaém, litoral paulista. Gosto de videogames, ouvir músicas e programar. Atualmente estou estudando Back End na Trybe!! Uma escola que ensina a programar, aprender e a trabalhar! Sou desenvolvedor Front End e futuro desenvolvedor Full Stack.',
       },
 
     }

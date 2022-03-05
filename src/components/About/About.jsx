@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from '../../translate/i18n';
 import './style.css';
 
 function About() {
@@ -6,7 +7,7 @@ function About() {
     <section id="about" className="about-container">
       <div className="profile-picture" />
       <p className="about-text">
-      Tenho 19 anos, nasci em São Paulo, morando atualmente em Itanhaém, litoral paulista. Gosto de videogames, ouvir músicas e programar. Atualmente estou estudando Back End na Trybe!! Uma escola que ensina a programar, aprender e a trabalhar! Sou desenvolvedor Front End e futuro desenvolvedor Full Stack.
+        { i18n.t('about.text') }
       </p>
     </section>
   )
