@@ -5,9 +5,12 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from 'react-icons/bi';
 import './style.css';
 
+const I18N_STORAGE_KEY = 'i18nextLng';
+
 function Header() {
   const [checkbox, setCheckbox] = useState(false);
   const [checkboxTheme, setCheckboxTheme] = useState(false);
+  const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY))
 
   const { hash } = useLocation();
 
@@ -19,6 +22,11 @@ function Header() {
   const changeTheme = () => {
     document.body.classList.toggle('dark-theme')
     setCheckboxTheme(!checkboxTheme);
+  }
+
+  const handleLanguage = ({ target }) => {
+    localStorage.setItem(I18N_STORAGE_KEY, target.value);
+    window.location.reload();
   }
 
   return (
@@ -62,7 +70,7 @@ function Header() {
               </a>
             </li>
 
-            <li  className={ hash === '#contacts' ? 'selected' : 0 }>
+            <li className={ hash === '#contacts' ? 'selected' : 0 }>
               <a href="#contacts">
                 <span><BiPhoneCall /></span>
                 <p>{ i18n.t('menu.contacts')}</p>
@@ -72,6 +80,11 @@ function Header() {
           
           <div className="empty-container" onClick={ changeBackground } />
         </div>
+
+        <select onChange={ handleLanguage } value={ language }>
+          <option value="pt-BR">Portuguese(PT-BR)</option>
+          <option value="en-US">English(US)</option>
+        </select>
 
         <div className="checkbox-theme">
           { checkboxTheme ? <BiMoon /> : <BiSun />}
