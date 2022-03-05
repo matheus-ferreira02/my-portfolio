@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import i18n from '../../translate/i18n';
 import { useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from 'react-icons/bi';
@@ -36,35 +37,35 @@ function Header() {
             <li className={ hash === '#home' ? 'selected' : 0 }>
               <a href="#home">
                 <span><BiHomeAlt /></span>
-                <p>Inicio</p>
+                <p>{ i18n.t('menu.home')}</p>
               </a>
             </li>
 
             <li className={ hash === '#about' ? 'selected' : 0 }>
               <a href="#about">
                 <span><BiInfoCircle /></span>
-                <p>Sobre</p>
+                <p>{ i18n.t('menu.about')}</p>
               </a>
             </li>
 
             <li  className={ hash === '#skills' ? 'selected' : 0 }>
               <a href="#skills">
                 <span><BiPencil /></span>
-                <p>Tecnologias</p>
+                <p>{ i18n.t('menu.technologies')}</p>
               </a>
             </li>
 
             <li  className={ hash === '#projects' ? 'selected' : 0 }>
               <a href="#projects">
                 <span><BiBookBookmark /></span>
-                <p>Projetos</p>
+                <p>{ i18n.t('menu.projects')}</p>
               </a>
             </li>
 
             <li  className={ hash === '#contacts' ? 'selected' : 0 }>
               <a href="#contacts">
                 <span><BiPhoneCall /></span>
-                <p>Contatos</p>
+                <p>{ i18n.t('menu.contacts')}</p>
               </a>
             </li>
           </ul>
