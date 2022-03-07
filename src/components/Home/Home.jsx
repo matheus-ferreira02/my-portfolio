@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import i18n from '../../translate/i18n';
 import { BsChevronDoubleDown } from "react-icons/bs";
 import './style.css';
+
 function Home() {
-  const phrases = i18n.t('messagesHome.smallText', { returnObjects: true });
+  const titles = i18n.t('messagesHome.smallText', { returnObjects: true });
   const [index, setIndex] = useState(0);
   const [change, setChange] = useState(true);
 
   /* Consultei o repositório do Lucas Petzinger para fazer o css */
-
   const setTitle = () => {
     setChange(true);
-    if (index === phrases.length - 1) setIndex(0);
+    if (index === titles.length - 1) setIndex(0);
     else setIndex(index + 1);
   }
 
@@ -29,13 +29,13 @@ function Home() {
           setChange(false);
           setTimeout(() => { setTitle() }, ml);
         } }
-        className={ `currentTitle1 ${ change && 'currentTitle2' } `}
+          className={ `currentTitle1 ${ change && 'currentTitle2' } `}
       >
-        { phrases[index] }
+        { titles[index] }
       </h1>
       <span className="arrow-down"><BsChevronDoubleDown /></span>
     </section>
-  )
+  );
 }
 
 export default Home;
