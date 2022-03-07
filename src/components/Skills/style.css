@@ -17,15 +17,12 @@
 .container-card .card {
   position: relative;
   transition: 0.5s;
+  margin: -30px 0;
 }
 
-/* .container-card .card:hover {
-  margin: 50px 0;
+.container-card .card:hover {
+  margin: 10px 0;
 }
-
-.container-card .card:last-child {
-  margin-bottom: 30px;
-} */
 
 .container-card .card .face {
   width: 300px;
@@ -36,7 +33,7 @@
 
 .container-card .card .face.face1 {
   position: relative;
-  background-color: var(--body-color);
+  background-color: var(--card-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,4 +118,30 @@
 .container-card .card .face.face2 .content-card a:hover {
   background-color: #333;
   color: #fff;
+}
+
+@media only screen and (min-width: 600px) {
+  .skills-container {
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .container-card  {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .container-card .card {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .container-card .card:hover {
+    margin: 0;
+  }
 }

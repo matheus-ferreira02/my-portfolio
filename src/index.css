@@ -13,6 +13,7 @@
   --primary-color: #6f64fe;
   --primary-color-light: #d3d7da;
   --toggle-color: rgb(230, 230, 230);
+  --card-color: #e7ecef;
   --text-color: #5e5e5e;
 
   --tran-02: all 0.2s ease;
@@ -28,6 +29,7 @@
   --primary-color: #6f64fe;
   --primary-color-light: #1d1e1f;
   --toggle-color: #363738;
+  --card-color: #232425;
   --text-color: gray;
 }
 
