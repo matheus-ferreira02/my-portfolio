@@ -17,9 +17,13 @@ function Header() {
   const { hash } = useLocation();
 
   const changeBackground = () => {
-    setCheckbox(!checkbox);
-    document.body.classList.toggle('blurred-background')
+    if(checkbox) openMenu();
   }
+
+  const openMenu = () => {
+    setCheckbox(!checkbox);
+    document.body.classList.toggle('blurred-background');
+  }    
 
   useEffect(() => {
     const darkTheme = localStorage.getItem(DARK_THEME) || 'false';
@@ -44,7 +48,7 @@ function Header() {
     <header className="header">
       <nav className="navigation">
         <label
-          onClick={ changeBackground }
+          onClick={ openMenu }
           htmlFor="checbox-menu"
           className="checbox-menu"
         >
@@ -54,35 +58,35 @@ function Header() {
         <div className={`container-menu ${checkbox && 'show-menu'}`}>
           <ul className="menu-links">
             <li className={ hash === '#home' ? 'selected' : 0 }>
-              <a href="#home">
+              <a onClick={ changeBackground } href="#home">
                 <span><BiHomeAlt /></span>
                 <p>{ i18n.t('menu.home')}</p>
               </a>
             </li>
 
             <li className={ hash === '#about' ? 'selected' : 0 }>
-              <a href="#about">
+              <a onClick={ changeBackground } href="#about">
                 <span><BiInfoCircle /></span>
                 <p>{ i18n.t('menu.about')}</p>
               </a>
             </li>
 
             <li  className={ hash === '#skills' ? 'selected' : 0 }>
-              <a href="#skills">
+              <a onClick={ changeBackground } href="#skills">
                 <span><BiPencil /></span>
                 <p>{ i18n.t('menu.technologies')}</p>
               </a>
             </li>
 
             <li  className={ hash === '#projects' ? 'selected' : 0 }>
-              <a href="#projects">
+              <a onClick={ changeBackground } href="#projects">
                 <span><BiBookBookmark /></span>
                 <p>{ i18n.t('menu.projects')}</p>
               </a>
             </li>
 
             <li className={ hash === '#contacts' ? 'selected' : 0 }>
-              <a href="#contacts">
+              <a onClick={ changeBackground } href="#contacts">
                 <span><BiPhoneCall /></span>
                 <p>{ i18n.t('menu.contacts')}</p>
               </a>
