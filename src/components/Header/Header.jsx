@@ -10,32 +10,27 @@ const I18N_STORAGE_KEY = 'i18nextLng';
 const DARK_THEME = 'dark-theme';
 
 function Header() {
-  const [checkbox, setCheckbox] = useState(false);
+  const [checkboxMenu, setCheckboxMenu] = useState(false);
   const [checkboxTheme, setCheckboxTheme] = useState(false);
   const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
-
   const { hash } = useLocation();
 
-  const changeBackground = () => {
-    if(checkbox) openMenu();
+  const toggleClassInBody = (className) => {
+    document.body.classList.toggle(className);
   }
 
-  const openMenu = () => {
-    setCheckbox(!checkbox);
-    document.body.classList.toggle('blurred-background');
-  }    
+  const checkMenuStatus = () => {
+    if(checkboxMenu) toggleMenu();
+  }
 
-  useEffect(() => {
-    const darkTheme = localStorage.getItem(DARK_THEME) || 'false';
-    if (darkTheme === 'true') {
-      document.body.classList.toggle(DARK_THEME);
-      setCheckboxTheme(true)
-    }
-  }, [])
+  const toggleMenu = () => {
+    setCheckboxMenu(!checkboxMenu);
+    toggleClassInBody('blurred-background');
+  }    
 
   const changeTheme = () => {
     localStorage.setItem(DARK_THEME, !checkboxTheme);
-    document.body.classList.toggle(DARK_THEME)
+    toggleClassInBody(DARK_THEME);
     setCheckboxTheme(!checkboxTheme);
   }
 
@@ -44,56 +39,69 @@ function Header() {
     window.location.reload();
   }
 
+  useEffect(() => {
+    const darkTheme = localStorage.getItem(DARK_THEME) || 'false';
+    if (darkTheme === 'true') {
+      toggleClassInBody(DARK_THEME);
+      setCheckboxTheme(true);
+    }
+  }, []);
+
   return (
     <header className="header">
       <nav className="navigation">
         <label
-          onClick={ openMenu }
+          onClick={ toggleMenu }
           htmlFor="checbox-menu"
           className="checbox-menu"
         >
           <GiHamburgerMenu />
         </label>
 
-        <div className={`container-menu ${checkbox && 'show-menu'}`}>
+        <div className={`container-menu ${checkboxMenu && 'show-menu'}`}>
           <ul className="menu-links">
-            <li className={ hash === '#home' ? 'selected' : 0 }>
-              <a onClick={ changeBackground } href="#home">
+            <li className={ hash === '#home' ? 'selected-menu' : 0 }>
+              <a onClick={ checkMenuStatus } href="#home">
                 <span><BiHomeAlt /></span>
+
                 <p>{ i18n.t('menu.home')}</p>
               </a>
             </li>
 
-            <li className={ hash === '#about' ? 'selected' : 0 }>
-              <a onClick={ changeBackground } href="#about">
+            <li className={ hash === '#about' ? 'selected-menu' : 0 }>
+              <a onClick={ checkMenuStatus } href="#about">
                 <span><BiInfoCircle /></span>
+
                 <p>{ i18n.t('menu.about')}</p>
               </a>
             </li>
 
-            <li  className={ hash === '#skills' ? 'selected' : 0 }>
-              <a onClick={ changeBackground } href="#skills">
+            <li  className={ hash === '#skills' ? 'selected-menu' : 0 }>
+              <a onClick={ checkMenuStatus } href="#skills">
                 <span><BiPencil /></span>
+
                 <p>{ i18n.t('menu.technologies')}</p>
               </a>
             </li>
 
-            <li  className={ hash === '#projects' ? 'selected' : 0 }>
-              <a onClick={ changeBackground } href="#projects">
+            <li  className={ hash === '#projects' ? 'selected-menu' : 0 }>
+              <a onClick={ checkMenuStatus } href="#projects">
                 <span><BiBookBookmark /></span>
+
                 <p>{ i18n.t('menu.projects')}</p>
               </a>
             </li>
 
-            <li className={ hash === '#contacts' ? 'selected' : 0 }>
-              <a onClick={ changeBackground } href="#contacts">
+            <li className={ hash === '#contacts' ? 'selected-menu' : 0 }>
+              <a onClick={ checkMenuStatus } href="#contacts">
                 <span><BiPhoneCall /></span>
+
                 <p>{ i18n.t('menu.contacts')}</p>
               </a>
             </li>
           </ul>
           
-          <div className="empty-container" onClick={ changeBackground } />
+          <div className="empty-container" onClick={ checkMenuStatus } />
         </div>
 
         <div className="options-container">
@@ -112,7 +120,10 @@ function Header() {
           </section>
 
           <section className="select-container">
-            <span className="label-input">{ i18n.t('messages.language') }</span>
+            <span className="label-input">
+              { i18n.t('messages.language') }
+            </span>
+
             <section className="dropdown">
               <div>
                 <span className="select">
@@ -128,11 +139,23 @@ function Header() {
                 <div
                   name={ language === 'pt-BR' ? 'en-US' : 'pt-BR' }
                   aria-hidden="true"
-                  onClick={ () => handleLanguage(language === 'pt-BR' ? 'en-US' : 'pt-BR') }
-                  className="dropdown-list__item">
+                  onClick={ () => handleLanguage(
+                      language === 'pt-BR'
+                      ? 'en-US'
+                      : 'pt-BR'
+                    )
+                  }
+                  className="dropdown-list__item"
+                >
                   { language === 'en-US'
-                    ? <img src="https://www.svgrepo.com/show/248829/brazil.svg" alt="flag" />
-                    : <img src="https://www.svgrepo.com/show/248851/united-states.svg" alt="flag" />
+                    ? <img
+                        src="https://www.svgrepo.com/show/248829/brazil.svg"
+                        alt="flag-language"
+                      />
+                    : <img
+                        src="https://www.svgrepo.com/show/248851/united-states.svg"
+                        alt="flag-language"
+                      />
                   }
                 </div>
               </div>
@@ -140,11 +163,9 @@ function Header() {
             </section>
           </section>
         </div>
-
-        
       </nav>
     </header>
-  )
+  );
 }
 
 export default Header;

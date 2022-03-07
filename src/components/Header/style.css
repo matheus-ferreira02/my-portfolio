@@ -71,7 +71,7 @@
   transition: all 0.2s ease;
 }
 
-.selected a {
+.selected-menu a {
   background-color: var(--toggle-color);
 }
 
@@ -336,15 +336,15 @@ input:checked[type="checkbox"]::before {
     color: var(--siderbar-color);
   }
 
-  .selected a {
+  .selected-menu a {
     background: none;
   }
 
-  .selected a p {
+  .selected-menu a p {
     border-bottom: 3px solid var(--primary-color);
   }
 
-  .selected a:hover p {
+  .selected-menu a:hover p {
     border-bottom: 3px solid var(--toggle-color);
   }
 }
