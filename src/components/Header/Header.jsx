@@ -94,12 +94,17 @@ function Header() {
 
         <div className="options-container">
           <section className="checkbox-theme">
-              { checkboxTheme ? <BiMoon /> : <BiSun />}
-              <input
-                onChange={ changeTheme }
-                type="checkbox"
-                checked={ checkboxTheme }
-              />
+            <label htmlFor="checkbox-theme">
+              <BiMoon />
+              <BiSun />
+            </label>
+              
+            <input
+              onChange={ changeTheme }
+              type="checkbox"
+              checked={ checkboxTheme }
+              id="checkbox-theme"
+            />
           </section>
 
           <section className="select-container">
@@ -107,7 +112,6 @@ function Header() {
             <section className="dropdown">
               <div>
                 <span className="select">
-                  { console.log(language) }
                   { language === 'en-US'
                     ? <img src="https://www.svgrepo.com/show/248851/united-states.svg" alt="flag" />
                     : <img src="https://www.svgrepo.com/show/248829/brazil.svg" alt="flag" />
