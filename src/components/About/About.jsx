@@ -10,7 +10,7 @@ function About() {
         { i18n.t('about.text') }
       </p>
     </section>
-  )
+  );
 }
 
 export default About;

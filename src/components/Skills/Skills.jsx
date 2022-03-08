@@ -2,6 +2,8 @@ import React from 'react';
 import i18n from '../../translate/i18n';
 import { FaReact } from 'react-icons/fa';
 import { DiJavascript1 } from 'react-icons/di';
+import { SiRedux } from 'react-icons/si';
+import RtlIcon from '../../images/rtl.js'
 import './style.css';
 
 function Skills() {
@@ -43,7 +45,7 @@ function Skills() {
         <div className="card">
           <div className="face face1">
             <div className="content-card">
-              <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="react" />
+              <SiRedux />
               <h3>Redux</h3>
             </div>
           </div>
@@ -59,7 +61,7 @@ function Skills() {
         <div className="card">
           <div className="face face1">
             <div className="content-card">
-              <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="react" />
+              <RtlIcon />
               <h3>RTL</h3>
             </div>
           </div>

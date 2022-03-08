@@ -131,6 +131,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: space-around;
   }
 
   .container-card .card {
@@ -138,7 +139,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 50%;
   }
 
   .container-card .card:hover {
