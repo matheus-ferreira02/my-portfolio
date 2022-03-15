@@ -20,7 +20,11 @@ const messages = {
         react: 'É uma biblioteca JavaScript open-source, criado pela equipe do Facebook, para desenvolver interfaces de usuários, sendo um dos frameworks mais utilizados no mercado de front-end.',
         javascript: 'É uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web.',
         redux: 'É uma das bibliotecas mais populares no desenvolvimento front-end atualmente. É usado principalmente para gerenciamento de estado do aplicativo.',
-        rtl: 'React Testing Libray é uma biblioteca JavaScript de testes, é uma solução muito leve para testar componentes React.',
+        rtl: 'É uma solução muito leve para testar componentes React. Ele fornece funções utilitárias leves em cima de react-dom, react-dom/test-utils, de uma maneira que incentiva melhores práticas de teste.',
+        git: 'Git é um sistema de controle de versão distribuído gratuito e de código aberto projetado para lidar com tudo, desde projetos pequenos a muito grandes com velocidade e eficiência.',
+        jest: 'Jest é um poderoso Framework de testes em JavaScript com um foco na simplicidade.',
+        css: 'Cascading Style Sheets ou Folhas de Estilo em Cascata é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou em XML.',
+        read: 'Leia mais',
       },
       messages: {
         language: 'Idioma',

@@ -109,14 +109,15 @@
   margin: 15px 0 0;
   display: inline-block;
   text-decoration: none;
-  font-weight: 900;
-  color: #333;
+  font-weight: 800;
+  color: var(--primary-color);
   padding: 5px;
-  border: 1px solid #333;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
 }
 
 .container-card .card .face.face2 .content-card a:hover {
-  background-color: #333;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -143,5 +144,23 @@
 
   .container-card .card:hover {
     margin: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .skills-container {
+    padding-left: 0;
+  }
+
+  .container-card  {
+    max-width: 1300px;
+  }
+  
+  .container-card .card {
+    margin: 0 20px;
+  }
+
+  .container-card .card:hover {
+    margin: 0 20px;
   }
 }
