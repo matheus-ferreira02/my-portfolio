@@ -20,7 +20,7 @@ function CardSkill({ title, text, icon, link }) {
             <a
               href={ link }
               target="_black"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               { i18n.t('skills.read') }
             </a>
