@@ -19,7 +19,7 @@ const REDUX = {
 }
 
 const HTML = {
-  url: 'https://www.svgrepo.com/show/303205/html-5-logo.svg',
+  url: 'https://www.svgrepo.com/show/349402/html5.svg',
   alt: 'Html',
 };
 
