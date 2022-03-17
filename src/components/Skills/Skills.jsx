@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from '../../translate/i18n';
 import { FaReact } from 'react-icons/fa';
 import { DiJavascript1, DiGit, DiCss3 } from 'react-icons/di';
 import { SiRedux, SiJest } from 'react-icons/si';
@@ -10,6 +11,7 @@ function Skills() {
   return (
     <section id="skills" className="skills-container">
       <section className="container-card">
+        <h1>{ i18n.t('menu.technologies')}</h1>
         <CardSkill
           title='React'
           text={ 'skills.react' }

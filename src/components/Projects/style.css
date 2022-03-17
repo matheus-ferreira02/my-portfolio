@@ -1,11 +1,18 @@
-.projects-container {
+.title-container {
+  color: var(--primary-color);
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.projects {
   width: 100%;
   display: flex;
-  padding: 40px 0;
+  padding: 10px 0;
   flex-direction: column-reverse;
 }
 
-.projects-container .notebook {
+.projects .notebook {
   width: 70%;
   animation: float 1.7s ease-in-out infinite;
   margin: auto;

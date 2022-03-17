@@ -14,6 +14,13 @@
   height: 100%;
 }
 
+.container-card h1 {
+  color: var(--primary-color);
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2em;
+}
+
 .container-card .card {
   position: relative;
   transition: 0.5s;

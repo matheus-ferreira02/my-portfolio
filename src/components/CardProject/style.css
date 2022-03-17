@@ -18,7 +18,7 @@
   width: 60vw;
   min-width: 280px;
   flex-basis: 1;
-  height: 450px;
+  height: 480px;
   margin: 5px 15px;
   background-color: var(--card-project);
   border-radius: 10px;
@@ -35,6 +35,7 @@
 .card-project .card h3 {
   text-align: center;
   color: var(--primary-color);
+  font-weight: 600;
   font-size: 1.6em;
   padding: 10px 0;
 }

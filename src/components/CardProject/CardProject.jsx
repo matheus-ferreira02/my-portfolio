@@ -19,7 +19,7 @@ function CardProject() {
           </a>
           
           <h3>{ name }</h3>
-          <p>ola site boniooooooooiooooooooiooooooooooooooooioooooooooooooooooo</p>
+          <p>Lorem ipsum dolor sit amet. Ea labore quia et deserunt earum qui numquam nulla. 33 cumque blanditiis quidem voluptatem aut natus vero!</p>
           <a
             href={ urlGitHub }
             target="_black"
