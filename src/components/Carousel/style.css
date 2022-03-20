@@ -1,0 +1,61 @@
+:root {
+  --lengthArray: 0; /* Tamanho do array */
+  --slide: 0vw; /* variavel q controla o translateX, tem q ser o */
+  --widthSlide: 0vw;  /* Tamanho do card */
+  --MarginLeftRigh: 0; /* Distancia dos elementos */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.App .cards_container {
+  width: calc(var(--widthSlide) * var(--lengthArray));
+  display: flex;
+  transform: translateX(calc(calc(100vw - var(--widthSlide)) /2 + var(--widthSlide) * -2));
+}
+
+.btn-next {
+  right: 0;
+  top: 0;
+}
+
+.animationSlide {
+  animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(calc(calc(100vw - var(--widthSlide)) /2 + var(--widthSlide) * -2 - var(--slide)));
+  }
+}
+
+.App button {
+  position: fixed;
+  z-index: 1;
+}
+
+.App .card {
+  width: var(--widthSlide);
+  height: 100%;
+  position: relative;
+  margin: 0 var(--MarginLeftRigh);
+  color: white;
+}
+
+.img_backGround {
+  width: 100%;
+  position: absolute;
+}
+
+.App .title {
+  position: relative;
+  z-index: 1;
+}

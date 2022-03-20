@@ -13,19 +13,17 @@
 }
 
 .projects .notebook {
-  width: 70%;
+  width: 80%;
   animation: float 1.7s ease-in-out infinite;
   margin: auto;
   filter: drop-shadow(0px 10px 10px #6e64fe54);
 }
 
-.projects .carousel {
-  display: flex;
-  scroll-behavior: unset;
-  overflow-x: scroll;
+.projects-container {
+  overflow-x: hidden;
 }
 
-.carousel::-webkit-scrollbar {
+.button-next, .button-prev {
   display: none;
 }
 
@@ -35,5 +33,68 @@
   }
   50% {
     transform: translateY(-15px);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .projects-container {
+    padding-left: 70px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .projects-container {
+    margin: auto;
+    padding-left: 0;
+  }
+
+  .button-next, .button-prev {
+    all: unset;
+    background-color: rgba(0, 0, 0, 0.247);
+    color: white;
+    display: block;
+    position: absolute;
+    height: 450px;
+    width: 61px;
+    cursor: pointer;
+    margin: 20px 0;
+    z-index: 1;
+  }
+
+  .button-prev {
+    border-right: 1px solid rgba(0, 0, 0, 0.16);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .button-next {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .button-next svg, .button-prev svg {
+    font-size: 2em;
+    margin: auto;
+    width: 100%;
+  }
+
+  .button-next {
+    right: 0;
+    top: 0;
+  }
+
+  .projects .carousel {
+    width: 50%;
+    position: relative;
+  }
+
+  .projects {
+    flex-direction: row;
+    margin: 20px 0;
+    align-items: center;
+  }
+
+  .projects .notebook {
+    width: 30%;
   }
 }

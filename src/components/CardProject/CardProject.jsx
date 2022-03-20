@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineLink, AiOutlineGithub } from 'react-icons/ai';
 import './style.css';
 
 function CardProject({ name, thumb, technology, gitHub, site }) {
