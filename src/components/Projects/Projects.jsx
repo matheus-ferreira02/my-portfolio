@@ -13,6 +13,7 @@ function Projects() {
       <h1 id="projects" className="title-container">{ i18n.t('menu.projects')}</h1>
       <section className="projects">
         <section className="carousel">
+          
           <Slider {...settings}>
             { projects.map((project) => (
               <CardProject

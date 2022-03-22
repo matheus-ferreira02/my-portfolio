@@ -4,7 +4,16 @@
   background-color: var(--primary-color-light);
   justify-content: center;
   padding: 30px 0;
+  flex-direction: column;
+  align-items: center;
   transition: 0.5s;
+}
+
+.skills-container h1 {
+  color: var(--primary-color);
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2em;
 }
 
 .container-card {

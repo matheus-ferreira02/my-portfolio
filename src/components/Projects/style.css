@@ -50,41 +50,46 @@
 
   .button-next, .button-prev {
     all: unset;
-    background-color: rgba(0, 0, 0, 0.247);
     color: white;
     display: block;
     position: absolute;
     height: 450px;
-    width: 61px;
     cursor: pointer;
     margin: 20px 0;
     z-index: 1;
   }
 
   .button-prev {
-    border-right: 1px solid rgba(0, 0, 0, 0.16);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    left: -60px;
+  }
+
+  .button-next svg, .button-prev svg {
+    font-size: 1.7em;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .button-prev svg {
+    padding-right: 2px;
+  }
+
+  .button-next svg {
+    padding-left: 3px;
   }
 
   .button-next {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-  }
-
-  .button-next svg, .button-prev svg {
-    font-size: 2em;
-    margin: auto;
-    width: 100%;
-  }
-
-  .button-next {
-    right: 0;
+    right: -60px;
     top: 0;
   }
 
   .projects .carousel {
     width: 50%;
+    margin-left: 100px;
     position: relative;
   }
 
@@ -95,6 +100,6 @@
   }
 
   .projects .notebook {
-    width: 30%;
+    width: 25%;
   }
 }

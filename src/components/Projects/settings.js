@@ -18,24 +18,27 @@ function NextArrow({ onClick }) {
 
 const settings = {
   className: "center",
+  focusOnSelect: true,
   centerMode: true,
   infinite: true,
   centerPadding: "100px",
   initialSlide: 1,
+  dots: true,
   slidesToShow: 2,
   speed: 300,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
   /* responsive: [
     {
-      breakpoint: 600,
+      breakpoint: 800,
       settings: {
         centerPadding: "100px",
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 2,
-        initialSlide: 2
+        initialSlide: 2,
+        dots: false,
       }
-    }
+    },
   ] */
 };
 

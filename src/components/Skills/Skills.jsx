@@ -10,8 +10,8 @@ import './style.css';
 function Skills() {
   return (
     <section id="skills" className="skills-container">
+      <h1>{ i18n.t('menu.technologies')}</h1>
       <section className="container-card">
-        <h1>{ i18n.t('menu.technologies')}</h1>
         <CardSkill
           title='React'
           text={ 'skills.react' }
