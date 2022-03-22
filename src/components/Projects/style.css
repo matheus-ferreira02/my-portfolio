@@ -1,22 +1,22 @@
 .title-container {
   color: var(--primary-color);
+  font-size: 2em;
   margin-top: 40px;
   text-align: center;
-  font-size: 2em;
 }
 
 .projects {
-  width: 100%;
   display: flex;
-  padding: 10px 0;
   flex-direction: column-reverse;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .projects .notebook {
-  width: 80%;
   animation: float 1.7s ease-in-out infinite;
-  margin: auto;
   filter: drop-shadow(0px 10px 10px #6e64fe54);
+  margin: auto;
+  width: 80%;
 }
 
 .projects-container {
@@ -26,12 +26,12 @@
 .button-next, .button-prev {
   all: unset;
   color: white;
-  position: absolute;
-  height: 450px;
   cursor: pointer;
-  margin: 20px 0;
-  z-index: 1;
   display: none;
+  height: 450px;
+  margin: 20px 0;
+  position: absolute;
+  z-index: 1;
 }
 
 @keyframes float {
@@ -70,9 +70,9 @@
   }
 
   .button-next svg, .button-prev svg {
-    font-size: 1.7em;
     background-color: var(--primary-color);
     border-radius: 50%;
+    font-size: 1.7em;
     margin: auto;
   }
 
@@ -92,16 +92,16 @@
   }
 
   .projects .carousel {
-    width: 50%;
-    margin-left: 10%;
     height: 65vh;
+    margin-left: 10%;
     position: relative;
+    width: 50%;
   }
 
   .projects {
+    align-items: center;
     flex-direction: row;
     margin: 20px 0;
-    align-items: center;
   }
 
   .projects .notebook {
@@ -111,9 +111,9 @@
 
 @media only screen and (min-width: 1200px)  {
   .projects .carousel {
-    width: 600px;
     margin-left: 10%;
     position: relative;
+    width: 600px;
   }
 
   .projects .notebook {

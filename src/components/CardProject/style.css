@@ -1,50 +1,50 @@
 .card-project {
-  display: flex;
-  flex-direction: column;
-  margin: 20px auto;
-  height: 450px;
-  width: 90%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  justify-content: space-between;
   background-color: var(--card-project);
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: space-between;
+  margin: 20px auto;
+  opacity: 0.5;
   transform: scale(1);
   transition: transform 300ms;
-  opacity: 0.5;
+  width: 90%;
 }
 
 .activeSlide {
-  transform: scale(1);
   opacity: 1;
+  transform: scale(1);
 }
 
 .card-project p {
-  width: 85%;
+  color: var(--text-color);
+  font-size: 1em;
   margin: 0 auto;
   text-align: center;
+  width: 85%;
   word-wrap: break-word;
-  color: var(--text-color);
-  font-size: 0.9em;
 }
 
 .card-project h3 {
-  margin: 0 auto;
-  text-align: center;
   color: var(--primary-color);
+  font-size: 1.6em;
   font-weight: 600;
-  font-size: 1.3em;
+  margin: 0 auto;
   padding: 10px 10px;
+  text-align: center;
 }
 
 .thumb-project {
-  width: 100%;
-  cursor: pointer;
-  height: 25vh;
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  cursor: pointer;
+  height: 25vh;
+  width: 100%;
 }
 
 .card-project .tecnology-icons {
@@ -62,27 +62,19 @@
 }
 
 .container-links a {
-  border: 1px solid black;
-  display: flex;
-  padding: 0px 10px;
-  margin: 0 10px 0 15px;
-  cursor: pointer;
-  border-radius: 2px;
   align-items: center;
+  border-radius: 2px;
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  margin: 0 10px 0 15px;
+  padding: 0px 10px;
 }
 
 @media only screen and (min-width: 600px) {
   .card-project {
     height: 470px;
     width: 85%;
-  }
-  
-  .card-project p {
-    font-size: 1em;
-  }
-
-  .card-project h3 {
-    font-size: 1.6em;
   }
 
   .thumb-project {
@@ -99,8 +91,8 @@
 
 @media only screen and (min-width: 992px) {
   .card-project {
-    width: 90%;
     transform: scale(0.7);
+    width: 90%;
   }
 
   .activeSlide {
@@ -111,8 +103,8 @@
 @media only screen and (min-width: 1200px)  {
   .card-project {
     height: 490px;
-    width: 90%;
     transform: scale(0.7);
+    width: 90%;
   }
 
   .activeSlide {
