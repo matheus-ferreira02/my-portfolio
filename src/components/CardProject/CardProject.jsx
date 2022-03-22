@@ -2,9 +2,9 @@ import React from 'react';
 import { AiOutlineLink, AiOutlineGithub } from 'react-icons/ai';
 import './style.css';
 
-function CardProject({ name, thumb, technology, gitHub, site }) {
+function CardProject({ name, thumb, technology, imgIndex, gitHub, site, index }) {
   return (
-    <section className="card-project">
+    <section className={ index === imgIndex ? 'card-project activeSlide' : "card-project"}>
       <a
         href={ site }
         target="_blank"

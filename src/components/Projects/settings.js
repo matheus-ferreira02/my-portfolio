@@ -16,6 +16,14 @@ function NextArrow({ onClick }) {
   );
 }
 
+function teste() {
+  console.log('antes');
+}
+
+function teste2() {
+  console.log('dfepois');
+}
+
 const settings = {
   className: "center",
   focusOnSelect: true,
@@ -28,6 +36,8 @@ const settings = {
   speed: 300,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
+  beforeChange: () => teste(),
+  afterChange: () => teste2(),
   /* responsive: [
     {
       breakpoint: 800,
