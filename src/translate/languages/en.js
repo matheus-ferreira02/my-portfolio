@@ -28,6 +28,15 @@ const messages = {
       },
       messages: {
         language: 'Language',
+      },
+      projects: {
+        starWars: 'In this application you can search and filter StarWars planet filters in a responsive table.',
+        password: 'In this application you can generate a random password of your choice and even copy and paste it wherever you want.',
+        cardTrunfo: 'In this application where the manipulation of states is used, you can create cards from the game Super Trunfo.',
+        trybeTunes: 'Itunes music application focused on React routes and API consumption.',
+        solarSystem: 'Simple application focused on React components.',
+        trybeWallet: 'Application of expenses and expenses, with state being managed by Redux.',
+        pixelsArt: 'Application made in pure JavaScript, in which you can color pixelArt frames.',
       }
     }
   }

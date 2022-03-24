@@ -43,7 +43,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   cursor: pointer;
-  height: 25vh;
+  height: 140px;
   width: 100%;
 }
 
@@ -76,16 +76,16 @@
     height: 470px;
     width: 85%;
   }
-
-  .thumb-project {
-    height: 30vh;
-  }
 }
 
 @media only screen and (min-width: 768px) {
   .card-project {
     height: 490px;
     width: 75%;
+  }
+
+  .thumb-project {
+    height: 200px;
   }
 }
 

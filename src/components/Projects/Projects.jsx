@@ -70,6 +70,7 @@ function Projects() {
           <Slider {...settings}>
             { projects.map((project, index) => (
               <CardProject
+                key={ project.name }
                 imgIndex={ imgIndex }
                 index={ index }
                 name={ project.name }
@@ -77,6 +78,7 @@ function Projects() {
                 technology={ project.technologyIcons }
                 gitHub={ project.urlGitHub }
                 site={ project.urlSite }
+                about={ project.about }
               />
               )) }
           </Slider>

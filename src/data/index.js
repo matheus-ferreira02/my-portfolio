@@ -40,6 +40,7 @@ const projects = [
     urlGitHub: 'https://github.com/matheus-ferreira02/Projeto-StarWars',
     urlSite: 'https://projeto-star-wars-alpha.vercel.app/',
     technologyIcons: [REACT, JAVASCRIPT, CSS],
+    about: 'starWars',
   },
   {
     name: 'Generate Password',
@@ -47,27 +48,31 @@ const projects = [
     urlGitHub: 'https://github.com/matheus-ferreira02/Project-Password-Generator',
     urlSite: 'https://project-password-generator.vercel.app/',
     technologyIcons: [REACT, JAVASCRIPT, RTL, JEST, CSS],
+    about: 'password',
   },
   {
     name: 'Card Trunfo',
     thumb: 'https://i.imgur.com/0ZMWnT5.png',
     urlGitHub: 'https://github.com/matheus-ferreira02/Projeto-Tryunfo',
     urlSite: 'https://projeto-tryunfo.vercel.app/',
-    technologyIcons: [REACT, JAVASCRIPT, CSS]
+    technologyIcons: [REACT, JAVASCRIPT, CSS],
+    about: 'cardTrunfo',
   },
   {
     name: 'TrybeTunes',
     thumb: 'https://i.imgur.com/0aHrPxn.png',
     urlGitHub: 'https://github.com/matheus-ferreira02/Projeto-Trybetunes',
     urlSite: 'https://projeto-trybetunes.vercel.app/',
-    technologyIcons: [REACT, JAVASCRIPT, CSS]
+    technologyIcons: [REACT, JAVASCRIPT, CSS],
+    about: 'trybeTunes',
   },
   {
     name: 'Solar System',
     thumb: 'https://i.imgur.com/HB0Bami.png',
     urlGitHub: 'https://github.com/matheus-ferreira02/Sistema-Solar',
     urlSite: 'https://matheus-ferreira02.github.io/Sistema-Solar/',
-    technologyIcons: [REACT, JAVASCRIPT, CSS]
+    technologyIcons: [REACT, JAVASCRIPT, CSS],
+    about: 'solarSystem',
   },
   {
     name: 'Trybe Wallet',
@@ -75,6 +80,7 @@ const projects = [
     urlGitHub: 'https://github.com/matheus-ferreira02/Project-TrybeWallet',
     urlSite: 'https://project-trybe-wallet-five.vercel.app/',
     technologyIcons: [REACT, REDUX, JAVASCRIPT, CSS],
+    about: 'trybeWallet',
   },
   {
     name: 'Pixels Art',
@@ -82,6 +88,7 @@ const projects = [
     urlGitHub: 'https://github.com/matheus-ferreira02/Pixels-Art',
     urlSite: 'https://matheus-ferreira02.github.io/Pixels-Art/',
     technologyIcons: [HTML, JAVASCRIPT, CSS],
+    about: 'pixelsArt',
   },
 ]
 
