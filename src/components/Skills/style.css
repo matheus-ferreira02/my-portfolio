@@ -104,7 +104,7 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
   transform: translateY(-100px);
 }
 
