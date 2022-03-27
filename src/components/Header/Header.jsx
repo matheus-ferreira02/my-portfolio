@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import i18n from '../../translate/i18n';
 import { useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from 'react-icons/bi';
 import { FiChevronDown } from 'react-icons/fi';
+import i18n from '../../translate/i18n';
 import './style.css';
 
 const I18N_STORAGE_KEY = 'i18nextLng';
@@ -19,14 +19,14 @@ function Header() {
     document.body.classList.toggle(className);
   }
 
-  const checkMenuStatus = () => {
-    if(checkboxMenu) toggleMenu();
-  }
-
   const toggleMenu = () => {
     setCheckboxMenu(!checkboxMenu);
     toggleClassInBody('blurred-background');
-  }    
+  } 
+
+  const checkMenuStatus = () => {
+    if(checkboxMenu) toggleMenu();
+  }   
 
   const changeTheme = () => {
     localStorage.setItem(DARK_THEME, !checkboxTheme);
@@ -50,13 +50,14 @@ function Header() {
   return (
     <header className="header">
       <nav className="navigation">
-        <label
+        <button
+          type="button"
           onClick={ toggleMenu }
           htmlFor="checbox-menu"
           className="checbox-menu"
         >
           <GiHamburgerMenu />
-        </label>
+        </button>
 
         <div className={`container-menu ${checkboxMenu && 'show-menu'}`}>
           <ul className="menu-links">
@@ -101,11 +102,17 @@ function Header() {
             </li>
           </ul>
           
-          <div className="empty-container" onClick={ checkMenuStatus } />
+         {/*  eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+          <button
+            onClick={ checkMenuStatus }
+            type="button"
+            className="empty-container"
+          />
         </div>
 
         <div className="options-container">
           <section className="checkbox-theme">
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="checkbox-theme">
               <BiMoon />
               <BiSun />

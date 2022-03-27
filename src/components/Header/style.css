@@ -75,6 +75,10 @@
   background-color: var(--toggle-color);
 }
 
+.checbox-menu {
+  all: unset;
+}
+
 .checbox-menu svg {
   color: var(--primary-color);
   cursor: pointer;
@@ -96,6 +100,7 @@
 }
 
 .empty-container {
+  all: unset;
   height: 100vh;
   width: 30%;
 }

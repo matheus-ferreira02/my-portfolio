@@ -1,7 +1,7 @@
 import React from 'react';
-import i18n from '../../translate/i18n';
 import PropTypes from 'prop-types';
 import { AiOutlineLink, AiOutlineGithub } from 'react-icons/ai';
+import i18n from '../../translate/i18n';
 import './style.css';
 
 function CardProject({ name, thumb, technology, imgIndex, gitHub, site, index, about }) {

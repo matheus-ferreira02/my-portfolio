@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { BsChevronDoubleDown } from 'react-icons/bs';
 import i18n from '../../translate/i18n';
-import { BsChevronDoubleDown } from "react-icons/bs";
 import './style.css';
 
 function Home() {
