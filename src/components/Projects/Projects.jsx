@@ -60,6 +60,12 @@ function Projects() {
         breakpoint: 992,
         settings: {
           centerPadding: '25%',
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
           dots: true,
         },
       },
