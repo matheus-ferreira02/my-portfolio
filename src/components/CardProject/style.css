@@ -62,13 +62,25 @@
 }
 
 .container-links a {
+  color: white;
   align-items: center;
-  border-radius: 2px;
-  border: 1px solid black;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
   cursor: pointer;
   display: flex;
-  margin: 0 10px 0 15px;
-  padding: 0px 10px;
+  margin-left: 20px;
+  padding: 2px 15px;
+  border-radius: 5px;
+  transition: all 0.1s;
+}
+
+.container-links a {
+  color: var(--primary-color);
+}
+
+.container-links a:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 @media only screen and (min-width: 600px) {
