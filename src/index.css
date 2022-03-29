@@ -19,6 +19,7 @@
   --card-color: #e7ecef;
   --card-project: #fff;
   --text-color: #5e5e5e;
+  --scroll-track: #fff;
 
   --tran-02: all 0.2s ease;
   --tran-03: all 0.3s ease;
@@ -35,6 +36,7 @@
   --toggle-color: #363738;
   --card-color: #232425;
   --card-project: #1d1e1f;
+  --scroll-track: #000;
   --text-color: gray;
 }
 
@@ -51,4 +53,17 @@ body {
   background-color: var(--body-color);
   font-family: 'Montserrat', sans-serif;
   transition: var(--tran-03);
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--scroll-track);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--primary-color);
 }
