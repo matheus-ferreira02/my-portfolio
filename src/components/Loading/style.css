@@ -1,0 +1,26 @@
+.loading-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: grid;
+  height: 100vh;
+  place-items: center center;
+  width: 100%;
+}
+
+.loading {
+  animation: loading 1s infinite;
+  border-radius: 50%;
+  border: 8px solid var(--primary-color);
+  border-top-color: #191D32;
+  height: 80px;
+  width: 80px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

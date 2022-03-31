@@ -1,0 +1,60 @@
+.empty-modal {
+  animation: showBackgroundModal 0.3s;
+  background-color: rgba(0, 0, 0, 0.360);
+  border: none;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+@keyframes showBackgroundModal {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, 0.360);
+  }
+}
+
+.message-modal {
+  align-content: space-between;
+  text-align: center;
+  align-items: center;
+  animation: showModal 0.3s;
+  background-color: var(--body-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 120px;
+  gap: 15px;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  z-index: 3;
+}
+
+@keyframes showModal {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.message-modal button {
+  all: unset;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  text-align: center;
+  width: 30%;
+  padding: 5px 0;
+  text-transform: uppercase;
+}

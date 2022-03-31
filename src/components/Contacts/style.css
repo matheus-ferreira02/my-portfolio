@@ -1,0 +1,26 @@
+.contacts-container {
+  background-color: var(--primary-color-light);
+}
+
+.form-contact {
+  margin: auto;
+  width: 90%;
+}
+
+.form-contact input {
+  width: 100%;
+}
+
+.form-contact textarea {
+  resize: none;
+  width: 100%;
+}
+
+.modal-container {
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+}
