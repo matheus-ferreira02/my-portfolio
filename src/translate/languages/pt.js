@@ -28,6 +28,8 @@ const messages = {
       },
       messages: {
         language: 'Idioma',
+        successfullyEmail: 'Mensagem enviada com sucesso!',
+        errorEmail: 'Erro ao enviar a mensagem, tente novamente mais tarde, ou entre em contato de outra forma.',
       },
       projects: {
         starWars: 'Nessa aplicação você pode pesquisar e fazer filtros de filtros de planetas de StarWars em uma tabela responsiva.',

@@ -1,10 +1,15 @@
 import React, { useRef, useState } from 'react';
-/* import emailjs from 'emailjs-com'; */
+import emailjs from 'emailjs-com';
+/* import i18n from '../../translate/i18n'; */
+import Loading from '../Loading/Loading';
+import Modal from '../Modal/Modal';
 import './style.css';
 
 function Contacts() {
   const form = useRef();
   const [modal, setModal] = useState(false);
+  const [loadingModal, setLoadingModal] = useState(false);
+  const [statusModal, setStatusModal] = useState(true);
 
   const showModal = () => {
     setModal(!modal);
@@ -13,39 +18,36 @@ function Contacts() {
 
   const submitEmail = (event) => {
     event.preventDefault();
-   /*  const { REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env; */
+    const { REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, /* REACT_APP_USER_ID */ } = process.env;
 
-  /*  emailjs.sendForm(REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, form.current, REACT_APP_USER_ID)
+    setLoadingModal(true);
+    showModal();
+
+    emailjs.sendForm(REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, form.current, 'dsada')
       .then(() => {
-        setModal(true);
-      }); */
-
-    showModal();    
+        setLoadingModal(false);
+        setStatusModal(true);
+      }, () => {
+        setLoadingModal(false);
+        setStatusModal(false);
+      });
   }
 
   return (
     <section id="contacts" className="contacts-container">
       { modal && (
         <section className="modal-container">
-          {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
-          <button
-            type="button"
-            className="empty-modal"
-            onClick={ showModal }
-          />
-          <section className="message-modal">
-            <p>Mensagem enviada com sucesso!</p>
-            <button
-              type="button"
-              onClick={ showModal }
-            >
-              Ok
-            </button>
-          </section>
+          { loadingModal
+            ? (
+              <Loading />
+            )
+            : <Modal
+                showModal={ showModal }
+                statusModal={ statusModal }
+              />
+            }
         </section>
-        
       ) }
-
 
       <form ref={ form } className="form-contact" onSubmit={ submitEmail }>
         <label htmlFor="name-input">
