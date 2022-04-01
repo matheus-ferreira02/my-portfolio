@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { AiOutlineCloseCircle, AiOutlineCheckCircle } from "react-icons/ai";
 import i18n from '../../translate/i18n';
 import './style.css';
 
@@ -12,7 +13,10 @@ function Modal({ showModal, statusModal }) {
         className="empty-modal"
         onClick={ showModal } 
       />
-      <section className="message-modal">
+      <section className={ statusModal
+        ? "message-modal success"
+        : "message-modal error" }>
+        { statusModal ? <AiOutlineCheckCircle/> : <AiOutlineCloseCircle /> }
         <p>{ statusModal
           ? i18n.t('messages.successfullyEmail')
           : i18n.t('messages.errorEmail')

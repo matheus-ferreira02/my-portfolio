@@ -58,3 +58,13 @@
   padding: 5px 0;
   text-transform: uppercase;
 }
+
+.error svg {
+  color: #DB2B39;
+  font-size: 1.7em;
+}
+
+.success svg {
+  color: #0A8754;
+  font-size: 1.7em;
+}
