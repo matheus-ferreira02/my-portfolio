@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+import { MdPerson, MdOutlineEmail } from "react-icons/md";
 /* import i18n from '../../translate/i18n'; */
 import Loading from '../Loading/Loading';
 import Modal from '../Modal/Modal';
@@ -34,7 +35,10 @@ function Contacts() {
   }
 
   return (
-    <section id="contacts" className="contacts-container">
+    <section className="contacts-container">
+      <h1 id="contacts" className="title-container">
+        Contatos
+      </h1>
       { modal && (
         <section className="modal-container">
           { loadingModal
@@ -50,15 +54,30 @@ function Contacts() {
       ) }
 
       <form ref={ form } className="form-contact" onSubmit={ submitEmail }>
-        <label htmlFor="name-input">
-          Name
-          <input type="text" name="name" id="name-input"/>
-        </label>
+        <div className="input-label">
+          <div className="icon">
+            <MdPerson />
+          </div>
+          
+          <input
+            maxLength="40"
+            type="text"
+            name="name"
+            placeholder='Name'
+          />
+        </div>
         
-        <label htmlFor="email-input">
-          Email
-          <input type="email"name="email" id="email-input"/>
-        </label>
+        <div className="input-label">
+          <div className="icon">
+            <MdOutlineEmail />
+          </div>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            />
+        </div>
 
         <label htmlFor="textarea">
           Mensagem
