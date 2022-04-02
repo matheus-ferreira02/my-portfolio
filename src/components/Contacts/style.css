@@ -9,7 +9,7 @@
 .form-contact {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 30px auto;
   width: 90%;
   gap: 20px;
 }
@@ -22,8 +22,18 @@
   background-color: white;
 }
 
+.input-label {
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  background-color: var(--primary-color-light);
+}
+
+.input-label:focus-within {
+  border-bottom-width: 2px;
+}
+
 .input-label .icon {
-  width: 8%;
+  width: 9%;
   position: absolute;
   display: grid;
   place-items: center center;
@@ -32,17 +42,49 @@
   color: white;
 }
 
-.form-contact input {
-  all: unset;
-  padding: 0 5px;
-  margin-left: 30px;
-  height: 100%;
-  width: 92%;
+.input-label .icon {
+  color: var(--primary-color);
+  background-color: var(--primary-color-light);
 }
 
-.form-contact textarea {
-  resize: none;
+.form-contact input {
+  all: unset;
+  color: var(--text-color);
+  padding: 0 8px;
+  margin-left: 30px;
+  height: 100%;
+  width: 91%;
+}
+
+.textarea-label {
+  border: 1px solid var(--primary-color);
+  padding: 5px 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.textarea-label span {
+  color: var(--text-color);
+  position: absolute;
+  top: 5px;
+  font-size: 1.1em;
+}
+
+.textarea-label:focus-within span {
+  top: -10px;
+  background-color: var(--primary-color-light);
+  transition: 0.2s ease-in-out;
+  font-size: 0.9em;
+}
+
+.textarea-label textarea {
+  all: unset;
   width: 100%;
+  margin-top: 10px;
+  color: var(--text-color);
+  resize: none;
+  height: 150px;
+  word-wrap: break-word;
 }
 
 .modal-container {

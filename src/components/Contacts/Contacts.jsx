@@ -79,10 +79,13 @@ function Contacts() {
             />
         </div>
 
-        <label htmlFor="textarea">
-          Mensagem
-          <textarea name="message" id="textarea" />
-        </label>
+        <div className="textarea-label">
+          <span>Mensagem</span>
+          <textarea
+            name="message"
+            maxLength={ 280 }
+          />
+        </div>
 
         <button type="submit">Enviar</button>
       </form>
