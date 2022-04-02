@@ -68,3 +68,9 @@
   color: #0A8754;
   font-size: 1.7em;
 }
+
+@media only screen and (min-width: 500px) {
+  .message-modal {
+    width: 450px;
+  }
+}
