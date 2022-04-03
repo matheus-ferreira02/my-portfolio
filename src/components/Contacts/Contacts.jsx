@@ -86,7 +86,7 @@ function Contacts() {
           />
         </div>
         
-        <div className="input-label">
+        <div className="input-label" style={{ marginBottom:"15px" }}>
           <div className="icon">
             <MdOutlineEmail />
           </div>
@@ -101,13 +101,17 @@ function Contacts() {
             onChange={ ({ target }) => setEmail(target.value) }
             placeholder="E-mail"
             />
-          { invalidEmail && (
-            <>
+          
+            <span
+              className={ invalidEmail ? 'fade-in invalid-icon' : 'fade-out invalid-icon' }
+            >
               <FiAlertCircle />
-              <span className="invalid-email">Insira um e-mail válido</span>
-            </>
-            
-          ) }
+            </span>
+            <span
+              className={ invalidEmail ? 'fade-in invalid-email' : 'fade-out invalid-email' }
+            >
+              Insira um e-mail válido
+            </span>
         </div>
 
         <div className="textarea-label">

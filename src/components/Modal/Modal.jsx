@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { AiOutlineCloseCircle, AiOutlineCheckCircle } from "react-icons/ai";
 import i18n from '../../translate/i18n';
 import './style.css';
 
 function Modal({ showModal, statusModal }) {
+  const modal = useRef();
+
+  const teste = () => {
+    modal.current.classList.add('teste');
+  }
+
   return (
     <>
       {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <button
         type="button"
         className="empty-modal"
-        onClick={ showModal } 
+        onClick={ teste } 
       />
-      <section className={ statusModal
+      <section onTransitionEnd={ showModal } ref={ modal } className={ statusModal
         ? "message-modal success"
         : "message-modal error" }>
         { statusModal ? <AiOutlineCheckCircle/> : <AiOutlineCloseCircle /> }
@@ -23,7 +29,7 @@ function Modal({ showModal, statusModal }) {
         }</p>
         <button
           type="button"
-          onClick={ showModal }
+          onClick={ teste }
         >
           Ok
         </button>

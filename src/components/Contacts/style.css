@@ -11,7 +11,7 @@
   flex-direction: column;
   margin: 30px auto;
   width: 90%;
-  gap: 40px;
+  gap: 20px;
 }
 
 .input-label {
@@ -19,6 +19,7 @@
   height: 30px;
   border: none;
   position: relative;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid var(--primary-color);
   background-color: var(--primary-color-light);
@@ -43,11 +44,30 @@
   background-color: var(--primary-color-light);
 }
 
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
 .invalid-email {
-  color: #DB2B39;
   position: absolute;
   bottom: -18px;
   font-size: 0.8em;
+}
+
+.invalid-email, .invalid-icon {
+  color: #DB2B39;
+}
+
+.invalid-icon {
+  margin-right: 5px;
 }
 
 .form-contact input {

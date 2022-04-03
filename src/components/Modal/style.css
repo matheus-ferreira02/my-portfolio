@@ -46,6 +46,12 @@
   }
 }
 
+.teste {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
 .message-modal button {
   all: unset;
   color: white;
