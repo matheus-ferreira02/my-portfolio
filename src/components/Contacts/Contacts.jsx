@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
-import { MdPerson, MdOutlineEmail } from "react-icons/md";
+import { MdPerson, MdOutlineEmail } from 'react-icons/md';
+import { FiAlertCircle } from 'react-icons/fi';
 /* import i18n from '../../translate/i18n'; */
 import Loading from '../Loading/Loading';
 import Modal from '../Modal/Modal';
@@ -11,6 +12,9 @@ function Contacts() {
   const [modal, setModal] = useState(false);
   const [loadingModal, setLoadingModal] = useState(false);
   const [statusModal, setStatusModal] = useState(true);
+  const [email, setEmail] = useState('');
+  const [invalidEmail, setInvalidEmail] = useState(false);
+  const refEmail = useRef();
 
   const showModal = () => {
     setModal(!modal);
@@ -33,6 +37,21 @@ function Contacts() {
         setStatusModal(false);
       });
   }
+
+  const validateEmail = () => {
+    const regexEmail = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+    const validationEmail = regexEmail.test(email);
+    return !validationEmail;
+  }
+
+  const focusOut = () => {
+    setInvalidEmail(validateEmail());
+  }
+
+  useEffect(() => {
+    if (!email) setInvalidEmail(false);
+    if (!validateEmail()) setInvalidEmail(validateEmail());
+  }, [email]);
 
   return (
     <section className="contacts-container">
@@ -75,15 +94,27 @@ function Contacts() {
           <input
             type="email"
             name="email"
+            onBlur={ focusOut }
+            maxLength="60"
+            ref={ refEmail }
+            value={ email }
+            onChange={ ({ target }) => setEmail(target.value) }
             placeholder="E-mail"
             />
+          { invalidEmail && (
+            <>
+              <FiAlertCircle />
+              <span className="invalid-email">Insira um e-mail válido</span>
+            </>
+            
+          ) }
         </div>
 
         <div className="textarea-label">
           <span>Mensagem</span>
           <textarea
             name="message"
-            maxLength={ 280 }
+            maxLength="280"
           />
         </div>
 
