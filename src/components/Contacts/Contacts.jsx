@@ -45,7 +45,8 @@ function Contacts() {
   }
 
   const focusOut = () => {
-    setInvalidEmail(validateEmail());
+    if (!email) setInvalidEmail(false);
+    else setInvalidEmail(validateEmail());
   }
 
   useEffect(() => {

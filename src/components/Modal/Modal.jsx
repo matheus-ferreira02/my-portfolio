@@ -6,9 +6,11 @@ import './style.css';
 
 function Modal({ showModal, statusModal }) {
   const modal = useRef();
+  const emptyModal = useRef();
 
   const teste = () => {
     modal.current.classList.add('teste');
+    emptyModal.current.classList.add('teste2');
   }
 
   return (
@@ -17,6 +19,7 @@ function Modal({ showModal, statusModal }) {
       <button
         type="button"
         className="empty-modal"
+        ref={ emptyModal }
         onClick={ teste } 
       />
       <section onTransitionEnd={ showModal } ref={ modal } className={ statusModal

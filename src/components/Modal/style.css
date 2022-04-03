@@ -52,6 +52,11 @@
   transition: 0.3s;
 }
 
+.teste2 {
+  background-color: rgba(0, 0, 0, 0.0);
+  transition: 0.3s;
+}
+
 .message-modal button {
   all: unset;
   color: white;
