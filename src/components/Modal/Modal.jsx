@@ -4,13 +4,13 @@ import { AiOutlineCloseCircle, AiOutlineCheckCircle } from "react-icons/ai";
 import i18n from '../../translate/i18n';
 import './style.css';
 
-function Modal({ showModal, statusModal }) {
+function Modal({ containerModal, statusModal }) {
   const modal = useRef();
   const emptyModal = useRef();
 
   const teste = () => {
-    modal.current.classList.add('teste');
-    emptyModal.current.classList.add('teste2');
+    modal.current.classList.add('fade-out-modal');
+    containerModal.current.classList.add('fade-out-background');
   }
 
   return (
@@ -22,7 +22,7 @@ function Modal({ showModal, statusModal }) {
         ref={ emptyModal }
         onClick={ teste } 
       />
-      <section onTransitionEnd={ showModal } ref={ modal } className={ statusModal
+      <section ref={ modal } className={ statusModal
         ? "message-modal success"
         : "message-modal error" }>
         { statusModal ? <AiOutlineCheckCircle/> : <AiOutlineCloseCircle /> }

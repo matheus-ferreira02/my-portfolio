@@ -1,20 +1,8 @@
 .loading-container {
-  animation: showBackground 0.3s;
-  background-color: rgba(0, 0, 0, 0.360);
   display: grid;
   height: 100vh;
   place-items: center center;
   width: 100%;
-}
-
-@keyframes showBackground {
-  0% {
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    background-color: rgba(0, 0, 0, 0.360);
-  }
 }
 
 .loading {

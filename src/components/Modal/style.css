@@ -1,25 +1,13 @@
 .empty-modal {
-  animation: showBackgroundModal 0.3s;
-  background-color: rgba(0, 0, 0, 0.360);
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   height: 100vh;
   position: fixed;
   width: 100%;
 }
 
-@keyframes showBackgroundModal {
-  0% {
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    background-color: rgba(0, 0, 0, 0.360);
-  }
-}
-
 .message-modal {
   align-content: space-between;
-  text-align: center;
   align-items: center;
   animation: showModal 0.3s;
   background-color: var(--body-color);
@@ -27,11 +15,12 @@
   color: var(--text-color);
   display: flex;
   flex-direction: column;
-  min-height: 120px;
   gap: 15px;
   justify-content: space-evenly;
   margin: auto;
+  min-height: 120px;
   padding: 20px;
+  text-align: center;
   width: 90%;
   z-index: 3;
 }
@@ -46,28 +35,23 @@
   }
 }
 
-.teste {
-  transform: translateY(-50px);
+.fade-out-modal {
   opacity: 0;
-  transition: 0.3s;
-}
-
-.teste2 {
-  background-color: rgba(0, 0, 0, 0.0);
+  transform: translateY(-50px);
   transition: 0.3s;
 }
 
 .message-modal button {
   all: unset;
+  background-color: var(--primary-color);
+  border-radius: 5px;
   color: white;
   cursor: pointer;
   font-size: 0.9em;
-  background-color: var(--primary-color);
-  border-radius: 5px;
-  text-align: center;
-  width: 30%;
   padding: 5px 0;
+  text-align: center;
   text-transform: uppercase;
+  width: 30%;
 }
 
 .error svg {

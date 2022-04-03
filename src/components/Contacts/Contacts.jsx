@@ -15,6 +15,7 @@ function Contacts() {
   const [email, setEmail] = useState('');
   const [invalidEmail, setInvalidEmail] = useState(false);
   const refEmail = useRef();
+  const emptyModal = useRef();
 
   const showModal = () => {
     setModal(!modal);
@@ -60,13 +61,13 @@ function Contacts() {
         Contatos
       </h1>
       { modal && (
-        <section className="modal-container">
+        <section onTransitionEnd={ showModal } ref={ emptyModal } className="modal-container">
           { loadingModal
             ? (
               <Loading />
             )
             : <Modal
-                showModal={ showModal }
+                containerModal={ emptyModal }
                 statusModal={ statusModal }
               />
             }
