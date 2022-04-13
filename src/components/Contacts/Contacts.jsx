@@ -24,12 +24,12 @@ function Contacts() {
 
   const submitEmail = (event) => {
     event.preventDefault();
-    const { REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
+    /* const { REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env; */
 
     setLoadingModal(true);
     showModal();
 
-    emailjs.sendForm(REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, form.current, REACT_APP_USER_ID)
+    emailjs.sendForm('gmail', 'email_portifolio', form.current, '2DEwQUgueOiEQaeXc')
       .then(() => {
         setLoadingModal(false);
         setStatusModal(true);
