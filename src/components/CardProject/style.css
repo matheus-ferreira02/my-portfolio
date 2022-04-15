@@ -59,18 +59,17 @@
 
 .container-links {
   display: flex;
+  justify-content: space-around;
+  padding: 0 10%;
 }
 
 .container-links a {
-  color: white;
   align-items: center;
-  border-radius: 5px;
   border: 1px solid var(--primary-color);
   cursor: pointer;
   display: flex;
-  margin-left: 20px;
-  padding: 2px 15px;
-  border-radius: 5px;
+  padding: 3px 15px;
+  border-radius: 3px;
   transition: all 0.1s;
 }
 

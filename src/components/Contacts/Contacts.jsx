@@ -16,6 +16,7 @@ function Contacts() {
   const [invalidEmail, setInvalidEmail] = useState(false);
   const refEmail = useRef();
   const emptyModal = useRef();
+  const refTextarea = useRef();
 
   const showModal = () => {
     setModal(!modal);
@@ -24,12 +25,12 @@ function Contacts() {
 
   const submitEmail = (event) => {
     event.preventDefault();
-    /* const { REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env; */
+    const { REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, /* REACT_APP_USER_ID */ } = process.env;
 
     setLoadingModal(true);
     showModal();
 
-    emailjs.sendForm('gmail', 'email_portifolio', form.current, '2DEwQUgueOiEQaeXc')
+    emailjs.sendForm(REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, form.current, 'wdawdad')
       .then(() => {
         setLoadingModal(false);
         setStatusModal(true);
@@ -54,6 +55,11 @@ function Contacts() {
     if (!email) setInvalidEmail(false);
     if (!validateEmail()) setInvalidEmail(validateEmail());
   }, [email]);
+
+  const teste = ({ target }) => {
+    if(target.value) refTextarea.current.id = 'teste';
+    else refTextarea.current.id = '';
+  }
 
   return (
     <section className="contacts-container">
@@ -117,10 +123,11 @@ function Contacts() {
         </div>
 
         <div className="textarea-label">
-          <span>Mensagem</span>
+          <span ref={ refTextarea }>Mensagem</span>
           <textarea
             name="message"
             maxLength="280"
+            onChange={ teste }
           />
         </div>
 

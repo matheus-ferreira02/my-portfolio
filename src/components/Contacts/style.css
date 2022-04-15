@@ -88,10 +88,16 @@
   position: absolute;
   top: 5px;
   transition: all 0.2s ease-in-out;
+  background-color: var(--primary-color-light);
+}
+
+#teste {
+  font-size: 0.9em;
+  padding: 0 5px;
+  top: -10px;
 }
 
 .textarea-label:focus-within span {
-  background-color: var(--primary-color-light);
   font-size: 0.9em;
   padding: 0 5px;
   top: -10px;
@@ -103,7 +109,7 @@
   height: 150px;
   margin-top: 10px;
   resize: none;
-  width: 100%;
+  width: 101%;
   word-wrap: break-word;
 }
 
