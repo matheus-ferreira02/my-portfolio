@@ -131,7 +131,7 @@ function Contacts() {
           />
         </div>
 
-        <button type="submit">Enviar</button>
+        <button className="btn-submit" type="submit">Enviar</button>
       </form>
     </section>
   );
