@@ -1,5 +1,7 @@
 .contacts-container {
   background-color: var(--primary-color-light);
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts-container .title-container {

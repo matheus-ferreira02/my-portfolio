@@ -7,6 +7,7 @@ import Loading from '../Loading/Loading';
 import Modal from '../Modal/Modal';
 import './style.css';
 import i18n from '../../translate/i18n';
+import IconsContact from '../IconsContact/IconsContact';
 
 function Contacts() {
   const form = useRef();
@@ -136,6 +137,8 @@ function Contacts() {
           { i18n.t('contacts.buttonSubmit') }
         </button>
       </form>
+
+      <IconsContact />
     </section>
   );
 }
