@@ -43,6 +43,10 @@ Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css *
   75% { opacity: 1;}
 }
 
+.arrow-down a {
+  all: unset;
+}
+
 .arrow-down {
   animation: float 1.5s ease-in-out infinite;
   color: #6F64FE;

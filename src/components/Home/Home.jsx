@@ -33,7 +33,12 @@ function Home() {
       >
         { titles[index] }
       </h1>
-      <span className="arrow-down"><BsChevronDoubleDown /></span>
+      <span className="arrow-down">
+        <a href="#about">
+          <BsChevronDoubleDown />
+        </a>
+        
+      </span>
     </section>
   );
 }

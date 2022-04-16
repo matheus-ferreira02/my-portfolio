@@ -96,7 +96,6 @@ function Header() {
             <li className={ hash === '#contacts' ? 'selected-menu' : 0 }>
               <a onClick={ checkMenuStatus } href="#contacts">
                 <span><BiPhoneCall /></span>
-
                 <p>{ i18n.t('menu.contacts')}</p>
               </a>
             </li>
