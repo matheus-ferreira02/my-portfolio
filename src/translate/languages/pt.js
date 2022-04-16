@@ -39,6 +39,13 @@ const messages = {
         solarSystem: 'Aplicação simples focado em componentes do React.',
         trybeWallet: 'Aplicação de gastos e despesas, com estado sendo gerenciado pelo Redux.',
         pixelsArt: 'Aplicação feita em JavaScript puro, em que você pode colorir quadros de pixelArt.',
+      },
+      contacts: {
+        title: 'Contatos',
+        placeholderName: 'Nome',
+        placeholderMessage: 'Mensagem',
+        buttonSubmit: 'Enviar',
+        errorMessage: 'Insira um e-mail válido'
       }
     }
   }

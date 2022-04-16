@@ -6,6 +6,7 @@ import { FiAlertCircle } from 'react-icons/fi';
 import Loading from '../Loading/Loading';
 import Modal from '../Modal/Modal';
 import './style.css';
+import i18n from '../../translate/i18n';
 
 function Contacts() {
   const form = useRef();
@@ -64,7 +65,7 @@ function Contacts() {
   return (
     <section className="contacts-container">
       <h1 id="contacts" className="title-container">
-        Contatos
+        { i18n.t('contacts.title') }
       </h1>
       { modal && (
         <section onTransitionEnd={ showModal } ref={ emptyModal } className="modal-container">
@@ -90,7 +91,7 @@ function Contacts() {
             maxLength="40"
             type="text"
             name="name"
-            placeholder='Name'
+            placeholder={ i18n.t('contacts.placeholderName') }
           />
         </div>
         
@@ -118,12 +119,12 @@ function Contacts() {
             <span
               className={ invalidEmail ? 'fade-in invalid-email' : 'fade-out invalid-email' }
             >
-              Insira um e-mail válido
+              { i18n.t('contacts.errorMessage') }
             </span>
         </div>
 
         <div className="textarea-label">
-          <span ref={ refTextarea }>Mensagem</span>
+          <span ref={ refTextarea }>{ i18n.t('contacts.placeholderMessage') }</span>
           <textarea
             name="message"
             maxLength="280"
@@ -131,7 +132,9 @@ function Contacts() {
           />
         </div>
 
-        <button className="btn-submit" type="submit">Enviar</button>
+        <button className="btn-submit" type="submit">
+          { i18n.t('contacts.buttonSubmit') }
+        </button>
       </form>
     </section>
   );
