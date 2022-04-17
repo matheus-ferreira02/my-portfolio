@@ -66,7 +66,7 @@ function Contacts() {
   return (
     <section className="contacts-container">
       <h1 id="contacts" className="title-container">
-        { i18n.t('contacts.title') }
+          { i18n.t('contacts.title') }
       </h1>
       { modal && (
         <section onTransitionEnd={ showModal } ref={ emptyModal } className="modal-container">
@@ -81,7 +81,7 @@ function Contacts() {
             }
         </section>
       ) }
-
+      <section className="contacts-content">
       <form ref={ form } className="form-contact" onSubmit={ submitEmail }>
         <div className="input-label">
           <div className="icon">
@@ -138,8 +138,12 @@ function Contacts() {
         </button>
       </form>
 
+      <div className="division" />
+
       <IconsContact />
     </section>
+      </section>
+      
   );
 }
 

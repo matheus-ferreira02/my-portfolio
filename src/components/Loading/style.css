@@ -2,7 +2,7 @@
   display: grid;
   height: 100vh;
   place-items: center center;
-  width: 100%;
+  width: 100vw;
 }
 
 .loading {

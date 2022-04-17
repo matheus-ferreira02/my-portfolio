@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 85%;
+  width: 100%;
   margin: 10px auto;
   color: var(--text-color);
 }
@@ -11,7 +11,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
 
@@ -19,12 +19,16 @@
   display: grid;
   place-items: center;
   color: var(--primary-color);
-  width: 80px;
+  width: 20%;
   height: 80px;
 }
 
 .icon-contact svg {
   font-size: 2.5em;
+}
+
+.content {
+  width: 80%;
 }
 
 .content h2 {
@@ -33,6 +37,7 @@
 
 .content .text-contact {
   font-size: 1.1em;
+  word-wrap: break-word;
 }
 
 .content .text-contact a {
@@ -48,4 +53,10 @@
   color: var(--primary-color);
   transition: all 0.2s linear;
   text-decoration: underline var(--primary-color);
+}
+
+@media only screen and (min-width: 720px) {
+  .contacts {
+    width: 585px;
+  }
 }

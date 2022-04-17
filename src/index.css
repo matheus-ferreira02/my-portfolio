@@ -53,6 +53,7 @@ body {
   background-color: var(--body-color);
   font-family: 'Montserrat', sans-serif;
   transition: var(--tran-03);
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
