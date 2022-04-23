@@ -46,6 +46,10 @@ const messages = {
         placeholderMessage: 'Message',
         buttonSubmit: 'Submit',
         errorMessage: 'Enter a valid e-mail'
+      },
+      footer: {
+        copyright: 'All rights reserved',
+        dev: 'Made by me with React, i18n, Slick Carousel and EmailJs.'
       }
     }
   }
