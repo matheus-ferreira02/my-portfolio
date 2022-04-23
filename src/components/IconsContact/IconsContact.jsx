@@ -34,11 +34,11 @@ function IconsContact() {
           <h2>Twitter</h2>
           <span className="text-contact">
             <a
-              href="/#"
+              href="https://twitter.com/matheus23803928"
               target="_blank"
               rel="noopener noreferrer"
             >
-              twitter
+              @TeusFerreiraDev
             </a>
           </span>
         </div>
@@ -70,7 +70,7 @@ function IconsContact() {
           <h2>E-mail</h2>
           <span className="text-contact">
           <a
-              href="/#"
+              href="mailto:m.ferreira.araujo2016@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
