@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { MdPerson, MdOutlineEmail } from 'react-icons/md';
 import { FiAlertCircle } from 'react-icons/fi';
-/* import i18n from '../../translate/i18n'; */
+import { BsDownload } from "react-icons/bs";
 import Loading from '../Loading/Loading';
 import Modal from '../Modal/Modal';
 import './style.css';
@@ -142,8 +142,13 @@ function Contacts() {
 
       <IconsContact />
     </section>
-      </section>
-      
+      <section className="curriculum">
+        <a href="../../curriculo.pdf" download>
+          <span><BsDownload /></span>
+          <p>{ i18n.t('contacts.download') }</p>
+        </a>
+      </section>      
+    </section>
   );
 }
 
