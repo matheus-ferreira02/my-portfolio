@@ -14,6 +14,7 @@ function Header() {
   const [checkboxTheme, setCheckboxTheme] = useState(false);
   const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
   const { hash } = useLocation();
+  const [heigthWindow, setHeigthWindow] = useState();
 
   const toggleClassInBody = (className) => {
     document.body.classList.toggle(className);
@@ -39,12 +40,25 @@ function Header() {
     window.location.reload();
   }
 
+  const teste = () => {
+    setHeigthWindow(window.scrollY);
+    window.onscroll = () => {
+      setHeigthWindow(window.scrollY);
+    }
+  }
+
+  useEffect(() => {
+    console.log(window.innerHeight)
+  }, [heigthWindow])
+
   useEffect(() => {
     const darkTheme = localStorage.getItem(DARK_THEME) || 'false';
     if (darkTheme === 'true') {
       toggleClassInBody(DARK_THEME);
       setCheckboxTheme(true);
     }
+
+    teste();
   }, []);
 
   return (
