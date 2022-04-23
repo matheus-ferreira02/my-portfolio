@@ -39,7 +39,7 @@
 }
 
 .slick-dots li.slick-active button:before {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 @keyframes float {
@@ -74,7 +74,7 @@
   }
 
   .button-next svg, .button-prev svg {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     border-radius: 50%;
     font-size: 1.7em;
     margin: auto;

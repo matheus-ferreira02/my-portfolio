@@ -59,7 +59,7 @@
 
 .container-card .card:hover .face.face1 {
   transform: translateY(0);
-  background-color: #6f64fe;
+  background-color: var(--primary-color);
   border-radius: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -77,7 +77,7 @@
 .container-card .card .face.face1 .content-card svg {
   font-size: 5em;
   width: 100%;
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 .container-card .card:hover .face.face1 .content-card svg {
@@ -88,7 +88,7 @@
   margin: 10px 0 0;
   padding: 0;
   text-align: center;
-  color: var(--text-color);
+  color: var(--secondary-color);
   font-size: 1.5em;
 }
 
@@ -126,15 +126,15 @@
   display: inline-block;
   text-decoration: none;
   font-weight: 800;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 5px;
   border-radius: 5px;
   transition: all 0.3s;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .container-card .card .face.face2 .content-card a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: #fff;
 }
 

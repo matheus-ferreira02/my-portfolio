@@ -22,7 +22,7 @@
 Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css */
 
 .currentTitle1 {
-  color: #6F64FE;
+  color: var(--primary-color);
   font-size: 2em;
   height: 10vh;
   opacity: 0;
@@ -49,7 +49,7 @@ Link: https://github.com/PetzingerLucas/Portfolio/blob/master/src/css/Home.css *
 
 .arrow-down {
   animation: float 1.5s ease-in-out infinite;
-  color: #6F64FE;
+  color: var(--secondary-color);
   cursor: pointer;
   height: 2vh;
 }

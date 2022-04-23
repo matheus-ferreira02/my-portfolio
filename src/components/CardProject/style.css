@@ -65,21 +65,13 @@
 
 .container-links a {
   align-items: center;
-  border: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
   cursor: pointer;
+  color: white;
   display: flex;
   padding: 3px 15px;
   border-radius: 3px;
   transition: all 0.1s;
-}
-
-.container-links a {
-  color: var(--primary-color);
-}
-
-.container-links a:hover {
-  background-color: var(--primary-color);
-  color: white;
 }
 
 @media only screen and (min-width: 600px) {
