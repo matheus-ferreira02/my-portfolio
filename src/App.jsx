@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Contacts from './components/Contacts/Contacts';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Projects />
         <Contacts />
       </main>
+      <Footer />
     </BrowserRouter>
   );
 }

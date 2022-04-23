@@ -1,0 +1,30 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container p {
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .footer-container {
+    padding-left: 70px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-container {
+    flex-direction: row;
+    padding-left: 0;
+  }
+
+  .footer-container p {
+    padding: 30px 40px;
+  }
+}
