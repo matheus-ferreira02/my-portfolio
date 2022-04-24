@@ -30,12 +30,12 @@ function Contacts() {
   }
 
   const submitEmail = () => {
-/*     const { REACT_APP_USER_ID } = process.env; */
+    const { REACT_APP_USER_ID } = process.env;
 
     setLoadingModal(true);
     showModal();
 
-    emailjs.sendForm('gmail', 'email_portifolio', form.current, 'REACT_APP_USER_ID')
+    emailjs.sendForm('gmail', 'email_portifolio', form.current, REACT_APP_USER_ID)
       .then(() => {
         setLoadingModal(false);
         setStatusModal(true);

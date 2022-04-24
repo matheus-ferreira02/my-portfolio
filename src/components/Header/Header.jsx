@@ -93,7 +93,7 @@ function Header() {
     if (window.innerWidth >= 1200) {
       setHomeHeight(500);
       setAboutHeight(1600);
-      setSkillsHeight(2800);
+      setSkillsHeight(2500);
       setContactsHeight(3400);
     };
   }, []);
