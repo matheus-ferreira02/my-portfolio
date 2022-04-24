@@ -45,7 +45,9 @@ const messages = {
         placeholderName: 'Name',
         placeholderMessage: 'Message',
         buttonSubmit: 'Submit',
-        errorMessage: 'Enter a valid e-mail',
+        errorEmail: 'Enter a valid email',
+        errorName: 'Enter a name',
+        errorMessage: 'Enter a message',
         download: 'Download curriculum'
       },
       footer: {

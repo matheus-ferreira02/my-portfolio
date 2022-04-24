@@ -62,13 +62,13 @@
   visibility: hidden;
 }
 
-.invalid-email {
+.invalid-value {
   bottom: -18px;
   font-size: 0.8em;
   position: absolute;
 }
 
-.invalid-email, .invalid-icon {
+.invalid-value, .invalid-icon {
   color: #DB2B39;
 }
 
@@ -93,7 +93,7 @@
   width: 100%;
 }
 
-.textarea-label span {
+.textarea-label .placeholder {
   color: var(--text-color);
   font-size: 1.1em;
   position: absolute;
@@ -102,13 +102,23 @@
   background-color: var(--primary-color-light);
 }
 
-#teste {
+.invalid-textarea {
+  bottom: 10px;
+}
+
+.invalid-textarea-icon {
+  right: 5px;
+  bottom: 5px;
+  position: absolute;
+}
+
+#textareaWithValue {
   font-size: 0.9em;
   padding: 0 5px;
   top: -10px;
 }
 
-.textarea-label:focus-within span {
+.textarea-label:focus-within .placeholder {
   font-size: 0.9em;
   padding: 0 5px;
   top: -10px;

@@ -16,23 +16,26 @@ function Contacts() {
   const [statusModal, setStatusModal] = useState(true);
   const [email, setEmail] = useState('');
   const [invalidEmail, setInvalidEmail] = useState(false);
-  const refEmail = useRef();
+  const [invalidName, setInvalidName] = useState(false);
+  const [invalidMessage, setInvalidMessage] = useState(false);
   const emptyModal = useRef();
   const refTextarea = useRef();
+  const [textarea, setTextarea] = useState('');
+  const [name, setName] = useState('');
+
 
   const showModal = () => {
     setModal(!modal);
     document.body.classList.toggle('show-modal');
   }
 
-  const submitEmail = (event) => {
-    event.preventDefault();
-    const { REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, /* REACT_APP_USER_ID */ } = process.env;
+  const submitEmail = () => {
+/*     const { REACT_APP_USER_ID } = process.env; */
 
     setLoadingModal(true);
     showModal();
 
-    emailjs.sendForm(REACT_APP_SERVICE_NAME, REACT_APP_TEMPLATE_ID, form.current, 'wdawdad')
+    emailjs.sendForm('gmail', 'email_portifolio', form.current, 'REACT_APP_USER_ID')
       .then(() => {
         setLoadingModal(false);
         setStatusModal(true);
@@ -48,6 +51,16 @@ function Contacts() {
     return !validationEmail;
   }
 
+  const verifyInputs = (event) => {
+    event.preventDefault();
+
+    if(!name) setInvalidName(true);
+    if(!email) setInvalidEmail(true)
+    if(!textarea) setInvalidMessage(true);
+
+    if (name && email && textarea) submitEmail();
+  }
+
   const focusOut = () => {
     if (!email) setInvalidEmail(false);
     else setInvalidEmail(validateEmail());
@@ -58,8 +71,17 @@ function Contacts() {
     if (!validateEmail()) setInvalidEmail(validateEmail());
   }, [email]);
 
-  const teste = ({ target }) => {
-    if(target.value) refTextarea.current.id = 'teste';
+  useEffect(() => {
+    if (name) setInvalidName(false);
+  }, [name]);
+
+  useEffect(() => {
+    if (textarea) setInvalidMessage(false);
+  }, [textarea]);
+
+  const verifyLengthTextarea = ({ target }) => {
+    setTextarea(target.value);
+    if(target.value) refTextarea.current.id = 'textareaWithValue';
     else refTextarea.current.id = '';
   }
 
@@ -82,7 +104,7 @@ function Contacts() {
         </section>
       ) }
       <section className="contacts-content">
-      <form ref={ form } className="form-contact" onSubmit={ submitEmail }>
+      <form ref={ form } className="form-contact" onSubmit={ verifyInputs }>
         <div className="input-label">
           <div className="icon">
             <MdPerson />
@@ -91,9 +113,22 @@ function Contacts() {
           <input
             maxLength="40"
             type="text"
+            value={ name }
             name="name"
             placeholder={ i18n.t('contacts.placeholderName') }
+            onChange={ ({ target }) => setName(target.value) }
           />
+
+            <span
+              className={ invalidName ? 'fade-in invalid-icon' : 'fade-out invalid-icon' }
+            >
+              <FiAlertCircle />
+            </span>
+            <span
+              className={ invalidName ? 'fade-in invalid-value' : 'fade-out invalid-value' }
+            >
+              { i18n.t('contacts.errorName') }
+            </span>
         </div>
         
         <div className="input-label" style={{ marginBottom:"15px" }}>
@@ -106,11 +141,10 @@ function Contacts() {
             name="email"
             onBlur={ focusOut }
             maxLength="60"
-            ref={ refEmail }
             value={ email }
             onChange={ ({ target }) => setEmail(target.value) }
             placeholder="E-mail"
-            />
+          />
           
             <span
               className={ invalidEmail ? 'fade-in invalid-icon' : 'fade-out invalid-icon' }
@@ -118,19 +152,31 @@ function Contacts() {
               <FiAlertCircle />
             </span>
             <span
-              className={ invalidEmail ? 'fade-in invalid-email' : 'fade-out invalid-email' }
+              className={ invalidEmail ? 'fade-in invalid-value' : 'fade-out invalid-value' }
             >
-              { i18n.t('contacts.errorMessage') }
+              { i18n.t('contacts.errorEmail') }
             </span>
         </div>
 
         <div className="textarea-label">
-          <span ref={ refTextarea }>{ i18n.t('contacts.placeholderMessage') }</span>
+          <span className="placeholder" ref={ refTextarea }>{ i18n.t('contacts.placeholderMessage') }</span>
           <textarea
             name="message"
             maxLength="280"
-            onChange={ teste }
+            value={ textarea }
+            onChange={ verifyLengthTextarea }
           />
+
+            <span
+              className={ invalidMessage ? 'fade-in invalid-icon invalid-textarea-icon' : 'fade-out invalid-icon invalid-textarea-icon' }
+            >
+              <FiAlertCircle />
+            </span>
+            <span
+              className={ invalidMessage ? 'fade-in invalid-value invalid-textarea' : 'fade-out invalid-value invalid-textarea' }
+            >
+              { i18n.t('contacts.errorMessage') }
+            </span>
         </div>
 
         <button className="btn-submit" type="submit">
