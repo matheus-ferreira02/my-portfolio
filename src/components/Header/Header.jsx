@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiHomeAlt, BiInfoCircle, BiPencil, BiBookBookmark, BiPhoneCall, BiSun, BiMoon } from 'react-icons/bi';
 import { FiChevronDown } from 'react-icons/fi';
@@ -15,6 +15,11 @@ function Header() {
   const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
   const { hash } = useLocation();
   const [heigthWindow, setHeigthWindow] = useState();
+  const navigate = useNavigate();
+  const [homeHeight, setHomeHeight] = useState(0);
+  const [aboutHeight, setAboutHeight] = useState();
+  const [skillsHeight, setSkillsHeight] = useState();
+  const [contactsHeight, setContactsHeight] = useState();
 
   const toggleClassInBody = (className) => {
     document.body.classList.toggle(className);
@@ -40,16 +45,58 @@ function Header() {
     window.location.reload();
   }
 
-  const teste = () => {
+  const setPositionMenu = () => {
     setHeigthWindow(window.scrollY);
     window.onscroll = () => {
-      setHeigthWindow(window.scrollY);
+      setHeigthWindow(document.scrollingElement.scrollTop);
     }
   }
 
   useEffect(() => {
-    console.log(window.innerHeight)
-  }, [heigthWindow])
+    switch (true) {
+      case heigthWindow >= 0 && heigthWindow < homeHeight:
+        if(hash !== '#home') navigate('#home');
+        break;
+      case heigthWindow >= homeHeight && heigthWindow < aboutHeight:
+        if(hash !== '#about') navigate('#about');
+        break;
+      case heigthWindow >= aboutHeight && heigthWindow < skillsHeight:
+        if(hash !== '#skills') navigate('#skills');
+        break;
+      case heigthWindow >= skillsHeight && heigthWindow < contactsHeight:
+        if(hash !== '#projects') navigate('#projects');
+        break;
+      case heigthWindow >= contactsHeight:
+        if(hash !== '#contacts') navigate('#contacts');
+        break;
+      default:
+        break;
+    }
+  }, [heigthWindow]);
+
+
+  useEffect(() => {
+
+    if (window.innerWidth >= 600 && window.innerWidth < 992) {
+      setHomeHeight(424);
+      setAboutHeight(1504);
+      setSkillsHeight(4000);
+      setContactsHeight(5000);
+    };
+
+    if (window.innerWidth >= 992 && window.innerWidth < 1200) {
+      setHomeHeight(500);
+      setAboutHeight(1600);
+      setSkillsHeight(3500);
+      setContactsHeight(4200);
+    };
+    if (window.innerWidth >= 1200) {
+      setHomeHeight(500);
+      setAboutHeight(1600);
+      setSkillsHeight(2800);
+      setContactsHeight(3400);
+    };
+  }, []);
 
   useEffect(() => {
     const darkTheme = localStorage.getItem(DARK_THEME) || 'false';
@@ -57,8 +104,7 @@ function Header() {
       toggleClassInBody(DARK_THEME);
       setCheckboxTheme(true);
     }
-
-    teste();
+    setPositionMenu();
   }, []);
 
   return (

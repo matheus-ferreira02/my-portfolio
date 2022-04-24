@@ -8,6 +8,7 @@ import CardSkill from '../CardSkill/CardSkill';
 import './style.css';
 
 function Skills() {
+
   return (
     <section id="skills" className="skills-container">
       <h1>{ i18n.t('menu.technologies')}</h1>
