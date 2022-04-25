@@ -4,9 +4,8 @@
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "prettier"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -19,6 +18,21 @@
         "react"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "indent": [
+            "error",
+            "spaces"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
     }
 }
