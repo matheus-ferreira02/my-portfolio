@@ -30,8 +30,8 @@ function Contacts() {
   }
 
   const submitEmail = () => {
-    console.log('entrou');
     const { REACT_APP_USER_ID } = process.env;
+    console.log(REACT_APP_USER_ID);
 
     setLoadingModal(true);
     showModal();
