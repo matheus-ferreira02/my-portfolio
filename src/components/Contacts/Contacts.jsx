@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { MdPerson, MdOutlineEmail } from 'react-icons/md';
 import { FiAlertCircle } from 'react-icons/fi';
-import { BsDownload } from "react-icons/bs";
 import Loading from '../Loading/Loading';
 import Modal from '../Modal/Modal';
 import './style.css';
@@ -30,13 +29,10 @@ function Contacts() {
   }
 
   const submitEmail = () => {
-    const { REACT_APP_USER_ID } = process.env;
-    console.log(REACT_APP_USER_ID);
-
     setLoadingModal(true);
     showModal();
 
-    emailjs.sendForm('gmail', 'email_portifolio', form.current, REACT_APP_USER_ID)
+    emailjs.sendForm('gmail', 'email_portifolio', form.current, '2DEwQUgueOiEQaeXc')
       .then(() => {
         setLoadingModal(false);
         setStatusModal(true);
@@ -190,8 +186,11 @@ function Contacts() {
       <IconsContact />
     </section>
       <section className="curriculum">
-        <a href="../../curriculo.pdf" download>
-          <span><BsDownload /></span>
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vTTGbwItUKA5BkXEfq1fP-LijJUadaUDIJwKCi_11iQp9yS8QWFWZxaIsiWEXUNyg/pub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <p>{ i18n.t('contacts.download') }</p>
         </a>
       </section>      

@@ -48,7 +48,7 @@ const messages = {
         errorEmail: 'Insira um e-mail válido',
         errorName: 'Insira um nome',
         errorMessage: 'Insira uma mensagem',
-        download: 'Baixar currículo'
+        download: 'Currículo'
       },
       footer: {
         copyright: 'Todos os direitos reservados',
