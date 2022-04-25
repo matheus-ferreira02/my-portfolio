@@ -8,10 +8,10 @@
 }
 
 .profile-picture {
-  background-image: url('https://i.pinimg.com/736x/3f/71/43/3f7143f59c39b15658186988732c41f6.jpg');
-  background-position: center;
+  background-image: url('../../images/profile.jpg');
+  background-position: 39% 45%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 200%;
   border-radius: 50%;
   height: 250px;
   margin-bottom: 20px;
